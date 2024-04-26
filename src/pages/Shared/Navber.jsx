@@ -27,16 +27,24 @@ const Navber = () => {
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-              <Link to={'/home'}><a>Home</a></Link>
+                <Link to={"/home"}>
+                  <a>Home</a>
+                </Link>
               </li>
               <li>
-              <Link to={'/all-art'}><a>All Art</a></Link>
+                <Link to={"/all-art"}>
+                  <a>All Art</a>
+                </Link>
               </li>
               <li>
-              <Link to={'/add-carft'}><a>Add Craft</a></Link>
+                <Link to={"/add-carft"}>
+                  <a>Add Craft</a>
+                </Link>
               </li>
               <li>
-              <Link to={'/my-art'}><a>My Art</a></Link>
+                <Link to={"/my-art"}>
+                  <a>My Art</a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -44,27 +52,43 @@ const Navber = () => {
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
-            
-          <li>
-              <Link to={'/home'}><a>Home</a></Link>
-              </li>
-              <li>
-              <Link to={'/all-art'}><a>All Art</a></Link>
-              </li>
-              <li>
-              <Link to={'/add-carft'}><a>Add Craft</a></Link>
-              </li>
-              <li>
-              <Link to={'/my-art'}><a>My Art</a></Link>
-              </li>    
-
+            <li>
+              <Link to={"/home"}>
+                <a>Home</a>
+              </Link>
+            </li>
+            <li>
+              <Link to={"/all-art"}>
+                <a>All Art</a>
+              </Link>
+            </li>
+            <li>
+              <Link to={"/add-carft"}>
+                <a>Add Craft</a>
+              </Link>
+            </li>
+            <li>
+              <Link to={"/my-art"}>
+                <a>My Art</a>
+              </Link>
+            </li>
           </ul>
         </div>
         <div className="navbar-end">
+
+          <div>
+            
+          </div>
+
+<Link to={'/login'}><button className="btn  bg-green-500">Login</button></Link>
+<Link to={'/register'}><button className="btn  bg-green-500 ">Register</button></Link>
+
           <div className="tooltip tooltip-left" data-tip="hello">
-          
-          <img className="w-12 rounded-full" alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-     
+            <img
+              className="w-12 rounded-full"
+              alt="Tailwind CSS Navbar component"
+              src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+            />
           </div>
         </div>
       </div>
