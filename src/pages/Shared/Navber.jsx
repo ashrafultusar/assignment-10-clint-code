@@ -1,6 +1,14 @@
 import { Link } from "react-router-dom";
+import { AuthContex } from "../../Firebase/Authprovider";
+import { useContext } from "react";
 
 const Navber = () => {
+
+  const {logOut,user}=useContext(AuthContex)
+  console.log(user)
+  
+
+
   return (
     <div className="mt-3 ">
       <div className="navbar bg-base-100">
@@ -75,21 +83,32 @@ const Navber = () => {
           </ul>
         </div>
         <div className="navbar-end">
-
-          <div>
-            
-          </div>
-
-<Link to={'/login'}><button className="btn  bg-green-500">Login</button></Link>
-<Link to={'/register'}><button className="btn  bg-green-500 ">Register</button></Link>
-
-          <div className="tooltip tooltip-left" data-tip="hello">
+          {
+            user ? <div className="flex gap-2">
+              <div className="tooltip tooltip-left" data-tip={ user.displayName}>
             <img
               className="w-12 rounded-full"
               alt="Tailwind CSS Navbar component"
-              src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+              src={user.photoURL}
             />
-          </div>
+            </div>
+              <div>
+              <button onClick={logOut} className="btn bg-green-300">
+                LogOut
+              </button>
+            </div>
+            </div>: <div><Link to={"/login"}>
+            <button className="btn  bg-green-500">Login</button>
+          </Link>
+          {/* <Link to={"/register"}>
+            <button className="btn  bg-green-500 ">Register</button>
+                </Link> */}
+              </div>
+          }
+
+          
+
+         
         </div>
       </div>
     </div>
