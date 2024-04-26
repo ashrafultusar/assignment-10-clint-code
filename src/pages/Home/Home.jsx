@@ -1,8 +1,12 @@
+import CraftItems from "../../Component/CraftItems";
+import Slider from "../Shared/Slider";
 
 const Home = () => {
     return (
-        <div>
-          <h1>this is home</h1>  
+      <div>
+        
+        <Slider></Slider>
+          <CraftItems></CraftItems>  
         </div>
     );
 };
