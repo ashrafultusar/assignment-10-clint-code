@@ -1,12 +1,14 @@
 import CraftItems from "../../Component/CraftItems";
 import Slider from "../Shared/Slider";
+import HappyCastomer from "./HappyCastomer";
 
 const Home = () => {
     return (
       <div>
         
         <Slider></Slider>
-          <CraftItems></CraftItems>  
+        <CraftItems></CraftItems>
+        <HappyCastomer></HappyCastomer>
         </div>
     );
 };

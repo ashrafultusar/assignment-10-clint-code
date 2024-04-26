@@ -1,12 +1,15 @@
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContex } from "../Firebase/Authprovider";
 import { useForm } from "react-hook-form";
 import { FaRegEye, FaEyeSlash, FaGoogle, FaGithub } from "react-icons/fa";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
-  const { signInUser, googleSignIn,githubSignIn } = useContext(AuthContex);
+  const { signInUser, googleSignIn, githubSignIn } = useContext(AuthContex);
+  const navigate = useNavigate();
+  const location=useLocation()
+  const from = location?.state || '/';
 
   const {
     register,
@@ -18,13 +21,28 @@ const Login = () => {
   const onSubmit = (data) => {
     const { email, password } = data;
     signInUser(email, password)
-      .then((result) => {
-        console.log(result.user);
-      })
+    .then((result) => {
+      if (result.user) {
+      navigate(from)
+    }
+  })
       .catch((error) => {
         console.log(error);
       });
   };
+
+
+
+  const handelSocialLogin = (socialProvider) => {
+    socialProvider()
+      .then((result) => {
+        if (result.user) {
+        navigate(from)
+      }
+    });
+  };
+
+
 
   return (
     <div>
@@ -81,12 +99,18 @@ const Login = () => {
 
               <div className="flex">
                 <div data-aos="zoom-in-right" data-aos-duration="1000">
-                  <button onClick={()=>googleSignIn()} className="btn font-bold text-[13px] mr-20 border border-orange-400 text-orange-600">
+                  <button
+                    onClick={() => handelSocialLogin(googleSignIn)}
+                    className="btn font-bold text-[13px] mr-20 border border-orange-400 text-orange-600"
+                  >
                     <FaGoogle></FaGoogle> Google
                   </button>
                 </div>
                 <div data-aos="zoom-in-left" data-aos-duration="1000">
-                  <button onClick={()=>githubSignIn()} className="btn font-bold text-[13px] border border-orange-400 text-orange-600">
+                  <button
+                    onClick={() =>handelSocialLogin (githubSignIn)}
+                    className="btn font-bold text-[13px] border border-orange-400 text-orange-600"
+                  >
                     <FaGithub></FaGithub> GitHub
                   </button>
                 </div>
