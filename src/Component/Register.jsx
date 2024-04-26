@@ -5,6 +5,7 @@ import { FaRegEye, FaEyeSlash } from "react-icons/fa";
 
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
+import { Helmet } from "react-helmet-async";
 
 const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -43,6 +44,9 @@ const Register = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>PH-Realestate | Register</title>
+      </Helmet>
       <div className="hero bg-base-200">
         <div className="hero-content">
           <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">

@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContex } from "../Firebase/Authprovider";
 import { useForm } from "react-hook-form";
 import { FaRegEye, FaEyeSlash, FaGoogle, FaGithub } from "react-icons/fa";
+import { Helmet } from "react-helmet-async";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -46,6 +47,10 @@ const Login = () => {
 
   return (
     <div>
+<Helmet>
+        <title>PH-Realestate | Login</title>
+      </Helmet>
+
       <div className="hero bg-base-200">
         <div className="hero-content">
           <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
