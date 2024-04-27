@@ -31,6 +31,7 @@ const router = createBrowserRouter([
       {
         path: "/all-art",
         element: <AllArt></AllArt>,
+        loader:()=>fetch('http://localhost:5000/craft')
       },
       {
         path: "/add-carft",
@@ -47,6 +48,7 @@ const router = createBrowserRouter([
             <MyArt></MyArt>
           </PrivateRoute>
         ),
+        
       },
     ],
   },

@@ -1,7 +1,11 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { useLoaderData } from 'react-router-dom';
 
 const MyArt = () => {
+
+    
+    
+
     return (
         <div>
             <Helmet>

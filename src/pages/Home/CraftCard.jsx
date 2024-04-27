@@ -2,19 +2,20 @@ import React from 'react';
 
 const CraftCard = ({ craft }) => {
     console.log(craft)
-    const { photo,name ,subcategoryName,stockStatus} = craft;
+    const { photo,name ,subcategoryName,stockStatus,itemName} = craft;
 
 
     return (
         <div>
 
-<div className="card  bg-base-100 shadow-xl">
+<div className="card h-[420px] bg-base-100 shadow-xl">
   <figure><img src={photo} alt="Shoes" /></figure>
   <div className="card-body">
-    <h2 className="card-title">Shoes!</h2>
-    <p>If a dog chews shoes whose shoes does he choose?</p>
-    <div className="card-actions justify-end">
-      <button className="btn btn-primary">Buy Now</button>
+            <h2 className="card-title">{ itemName}</h2>
+            <h2 className="text-sm font-semibold">{ subcategoryName}</h2>
+            <p>{ stockStatus}</p>
+    <div className="card-actions ">
+      <button className="btn w-full bg-green-500">View Detiels</button>
     </div>
   </div>
 </div>
