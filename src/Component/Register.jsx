@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContex } from "../Firebase/Authprovider";
 import { FaRegEye, FaEyeSlash } from "react-icons/fa";
 
@@ -9,10 +9,13 @@ import { Helmet } from "react-helmet-async";
 
 const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
-
   const [error, setError] = useState("");
-
   const { creatUser } = useContext(AuthContex);
+
+
+  const navigate = useNavigate();
+  const location =useLocation()
+  const from = location?.state || "/";
 
   // react hook--------------------------------------
   const {
@@ -37,8 +40,12 @@ const Register = () => {
       return;
     }
 
-    creatUser(email, password).then((result) => {
-      console.log(result);
+    creatUser(email, password)
+      .then((result) => {
+        console.log(result);
+        navigate(from)
+        // toast.success('Register Successfully')
+
     });
   };
 
