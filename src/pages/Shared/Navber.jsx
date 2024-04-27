@@ -8,7 +8,7 @@ import { set } from "react-hook-form";
 const Navber = () => {
 
   const {logOut,user}=useContext(AuthContex)
-  console.log(user)
+  // console.log(user)
   
   // them
   const [theme, setThem] = useState(localStorage.getItem('theme') ? localStorage.getItem('theme') : 'light');
@@ -75,7 +75,8 @@ const Navber = () => {
               </li>
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">DREAM ART</a>
+          <a className="btn btn-ghost text-xl">D-ART</a>
+       
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
@@ -132,11 +133,15 @@ const Navber = () => {
                 LogOut
               </button>
             </div>
-            </div>: <div><Link to={"/login"}>
+            </div> : <div className="flex gap-1">
+            <div><Link to={"/login"}>
             <button className="btn  bg-green-500">Login</button>
-          </Link>
-         
+          </Link>         
+              </div><div><Link to={"/login"}>
+            <button className="btn  bg-green-500">Register</button>
+          </Link>         
               </div>
+            </div>
           }
 
           

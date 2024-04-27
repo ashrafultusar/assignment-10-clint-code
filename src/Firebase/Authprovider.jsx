@@ -24,7 +24,7 @@ const githubProvider = new GithubAuthProvider();
 const Authprovider = ({ children }) => {
   const [user, setUser] = useState(null);
 const [loading,setloading]=useState(true)
-console.log(loading)
+// console.log(loading)
   
   
   

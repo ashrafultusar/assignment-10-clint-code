@@ -4,6 +4,7 @@ import { AuthContex } from "../Firebase/Authprovider";
 import { useForm } from "react-hook-form";
 import { FaRegEye, FaEyeSlash, FaGoogle, FaGithub } from "react-icons/fa";
 import { Helmet } from "react-helmet-async";
+import { toast } from "react-toastify";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -38,7 +39,8 @@ const Login = () => {
     socialProvider()
       .then((result) => {
         if (result.user) {
-        navigate(from)
+          navigate(from)
+          // toast("Wow so easy!");
       }
     });
   };
@@ -48,7 +50,7 @@ const Login = () => {
   return (
     <div>
 <Helmet>
-        <title>PH-Realestate | Login</title>
+        <title>DREAM ART | Login</title>
       </Helmet>
 
       <div className="hero bg-base-200">

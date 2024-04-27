@@ -5,7 +5,7 @@ const MyArt = () => {
     return (
         <div>
             <Helmet>
-        <title>PH-Realestate | My Art</title>
+        <title>DREAM ART | My Art</title>
       </Helmet>
             my art and craft
         </div>
