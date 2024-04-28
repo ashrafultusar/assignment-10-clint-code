@@ -7,7 +7,7 @@ import AllCraftSiggleCard from './AllCraftSiggleCard';
 const AllArt = () => {
 
     const crafts = useLoaderData();
-    console.log(crafts)
+    // console.log(crafts)
     return (
         <div>
             <Helmet>

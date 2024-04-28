@@ -44,7 +44,7 @@ const Register = () => {
       .then((result) => {
         console.log(result);
         navigate(from)
-        // toast.success('Register Successfully')
+        toast.success('Register Successfully')
 
     });
   };

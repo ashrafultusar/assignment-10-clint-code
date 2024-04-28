@@ -11,7 +11,7 @@ const Login = () => {
   const { signInUser, googleSignIn, githubSignIn } = useContext(AuthContex);
   const navigate = useNavigate();
   const location=useLocation()
-  const from = location?.state || '/';
+  const from = location?.state || '/'; 
 
   const {
     register,
@@ -25,7 +25,8 @@ const Login = () => {
     signInUser(email, password)
     .then((result) => {
       if (result.user) {
-      navigate(from)
+        navigate(from)
+       
     }
   })
       .catch((error) => {
@@ -40,7 +41,7 @@ const Login = () => {
       .then((result) => {
         if (result.user) {
           navigate(from)
-          // toast("Wow so easy!");
+          toast.success("Login successfully!");
       }
     });
   };

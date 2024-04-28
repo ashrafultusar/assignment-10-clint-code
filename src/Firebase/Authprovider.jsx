@@ -13,6 +13,7 @@ import {
   signOut,
 } from "firebase/auth";
 import { GoogleAuthProvider } from "firebase/auth";
+import { toast } from "react-toastify";
 
 
 // social auth provider
@@ -53,7 +54,8 @@ const [loading,setloading]=useState(true)
     // signOut
     const logOut = () => {
         setUser(null)
-        signOut(auth)
+      signOut(auth)
+      toast.success('Succesfully LogOut')
     }
     
     
