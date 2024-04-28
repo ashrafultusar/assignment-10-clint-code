@@ -8,8 +8,28 @@ const MyArt = () => {
   const { user } = useContext(AuthContex) || {};
   console.log(user);
   const [item, setItem] = useState();
+  const[filter,setFilter]=useState([])
   const [controle, setControle] = useState(false);
   console.log(item);
+ 
+
+
+  const handelFilter = e => {
+    if (e === 'all') {
+      setFilter(item);
+    }
+    else if (e === 'yes') {
+      const yes = item.filter(user => user.customization === "Yes");
+      setFilter(yes)
+    }
+    else if (filter==='no') {
+      const no = item.filter(user => user.customization === "No");
+      setFilter(no)
+    }
+  }
+
+
+
 
   // update section
   useEffect(() => {
@@ -18,9 +38,11 @@ const MyArt = () => {
         .then((res) => res.json())
         .then((data) => {
           setItem(data);
+          setFilter(data)
+
         });
     }
-  }, [user,controle]);
+  }, [user, controle]);
 
   // delet section
   const handelDelet = (id) => {
@@ -30,7 +52,7 @@ const MyArt = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data.deletedCount > 0) {
-          setControle(!controle)
+          setControle(!controle);
         }
       });
   };
@@ -40,9 +62,22 @@ const MyArt = () => {
       <Helmet>
         <title>DREAM ART | My Art</title>
       </Helmet>
+
+      <div className="mb-24 mt-12 text-center">
+      <details className="dropdown">
+  <summary className="m-1 bg-green-500 btn text-xl font-bold">Customization</summary>
+  <ul className="p-2 shadow menu dropdown-content z-[1] rounded-box w-44 pl-16 bg-green-500">
+    <li className="text-[18px] font-semibold" onClick={()=>handelFilter('all')}><a>All</a></li>
+    <li className="text-[18px] font-semibold" onClick={()=>handelFilter('yes')}><a>Yes</a></li>
+    <li className="text-[18px] font-semibold" onClick={()=>handelFilter('no')}><a>No</a></li>
+  </ul>
+</details>
+      </div>
+
       
-      <div className="gap-6  grid grid-cols-1 md:grid-cols-3">
-        {item?.map((p) => (
+
+      <div className="gap-6 my-12 grid grid-cols-1 md:grid-cols-3">
+        {filter?.map((p) => (
           <div key={p._id}>
             <div>
               <div className="card h-[420px] card-compact  bg-base-100 shadow-xl">
