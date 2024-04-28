@@ -19,7 +19,10 @@ const Navber = () => {
     } else {
       setThem('light')
   }
-}
+  }
+  
+
+  
 
   useEffect(() => {
     localStorage.setItem('them', theme);

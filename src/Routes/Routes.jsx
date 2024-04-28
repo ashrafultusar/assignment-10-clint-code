@@ -9,6 +9,7 @@ import AddCraft from "../Component/AddCraft";
 import MyArt from "../Component/MyArt";
 import PrivateRoute from "../Component/PrivateRoute";
 import UpdateCraft from "../Component/UpdateCraft";
+import ViewDetails from "../Component/ViewDetails";
 
 const router = createBrowserRouter([
   {
@@ -45,7 +46,7 @@ const router = createBrowserRouter([
       {
         path: "/my-art",
         element: (
-          <PrivateRoute> 
+          <PrivateRoute>
             <MyArt></MyArt>
           </PrivateRoute>
         ),
@@ -55,6 +56,14 @@ const router = createBrowserRouter([
         element: (
           <PrivateRoute>
             <UpdateCraft></UpdateCraft>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/viewDetails/:id",
+        element: (
+          <PrivateRoute>
+            <ViewDetails></ViewDetails>
           </PrivateRoute>
         ),
       },

@@ -12,10 +12,8 @@ const CraftItems = () => {
       </Helmet>
 
       <div>
-        <h1>all craft item:{crafts.length}</h1>
-
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {crafts.map((craft) => (
+          {crafts.slice(0,6).map((craft) => (
             <CraftCard key={craft._id} craft={craft}></CraftCard> 
           ))}
         </div>

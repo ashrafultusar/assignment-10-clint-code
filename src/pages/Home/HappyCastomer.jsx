@@ -3,7 +3,7 @@ import Marquee from "react-fast-marquee";
 
 const HappyCastomer = () => {
   return (
-    <div className="my-16 bg-">
+    <div className="my-16 bg-[#f3f3f3] py-16 ">
       <div className="text-center pb-8">
         <h1 className="text-2xl md:text-5xl font-semibold pb-2 underline">
           Meet Our Awasem Crafter

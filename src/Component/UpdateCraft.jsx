@@ -82,7 +82,7 @@ const UpdateCraft = () => {
                 placeholder="Insert New Image Url"
                 name="photo"
                 className="input input-bordered w-full"
-                required
+                
               />
             </div>
             <div className="md:flex gap-6">
@@ -95,7 +95,7 @@ const UpdateCraft = () => {
                   placeholder="Item Name"
                   name="itemName"
                   className="input input-bordered  w-full"
-                  required
+                  
                   defaultValue={update.itemName}
                 />
               </div>
@@ -111,7 +111,7 @@ const UpdateCraft = () => {
                   placeholder="stockStatus"
                   name="stockStatus"
                   className="input input-bordered w-full"
-                  required
+                  
                   defaultValue={update.stockStatus}
                 />
               </div>
@@ -126,7 +126,7 @@ const UpdateCraft = () => {
                   placeholder="Subcategory Name"
                   name="subcategoryName"
                   className="input input-bordered w-full"
-                  required
+                  
                   defaultValue={update.subcategoryName}
                 />
               </div>
@@ -139,7 +139,7 @@ const UpdateCraft = () => {
                   placeholder="Short Description"
                   name="shortDescription"
                   className="input input-bordered  w-full"
-                  required
+                  
                   defaultValue={update.shortDescription}
                 />
               </div>
@@ -154,7 +154,7 @@ const UpdateCraft = () => {
                   placeholder="price"
                   name="price"
                   className="input input-bordered w-full"
-                  required
+                  
                   defaultValue={update.price}
                 />
               </div>
@@ -167,7 +167,7 @@ const UpdateCraft = () => {
                   placeholder="rating"
                   name="rating"
                   className="input input-bordered  w-full"
-                  required
+                  
                   defaultValue={update.rating}
                 />
               </div>
@@ -184,7 +184,7 @@ const UpdateCraft = () => {
                   placeholder="customization "
                   name="customization"
                   className="input input-bordered w-full"
-                  required
+                  
                   defaultValue={update.customization}
                 />
               </div>
@@ -197,7 +197,7 @@ const UpdateCraft = () => {
                   name="processingTime"
                   placeholder="processing-time"
                   className="input input-bordered  w-full"
-                  required
+                  
                   defaultValue={update.processingTime}
                 />
               </div>

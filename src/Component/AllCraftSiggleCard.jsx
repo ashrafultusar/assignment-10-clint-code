@@ -1,23 +1,39 @@
-import React from 'react';
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const AllCraftSiggleCard = ({ craft }) => {
-    
-    const { photo} = craft;
+  const { photo, itemName, subcategoryName, stockStatus } = craft;
 
-    return (
-        <div>
-            <div className="card h-[420px] bg-base-100 shadow-xl">
-                <figure><img src={ photo} alt="Shoes" /></figure>
-  <div className="card-body">
-    <h2 className="card-title">Shoes!</h2>
-    <p>If a dog chews shoes whose shoes does he choose?</p>
-    <div className="card-actions justify-end">
-      <button className="btn btn-primary">Buy Now</button>
-    </div>
-  </div>
-</div>
+//   const [item,setItem]=useState([])
+// console.log(item)
+//   useEffect(() => {
+//     fetch(`http://localhost:5000/viewDetails/${craft}`)
+//       .then((res) => res.json())
+//       .then((data) => {
+//         setItem(data)
+//     })
+
+//   })
+
+  return (
+    <div>
+      <div className="card h-[420px] bg-base-100 shadow-xl">
+        <figure>
+          <img src={photo} alt="Shoes" />
+        </figure>
+        <div className="card-body">
+          <h2 className="card-title">{itemName}</h2>
+          <h2 className="text-sm font-semibold">{subcategoryName}</h2>
+          <p>{stockStatus}</p>
+          <div>
+            <Link to={`/viewDetails/${craft._id}`}>
+              <button className="btn w-full bg-green-500">View Detiels</button>
+            </Link>
+          </div>
         </div>
-    );
+      </div>
+    </div>
+  );
 };
 
 export default AllCraftSiggleCard;

@@ -15,7 +15,7 @@ const AllArt = () => {
       </Helmet>
             <h1>{ }</h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-12">
               {crafts.map((craft) => (
           <AllCraftSiggleCard key={craft._id} craft={craft}></AllCraftSiggleCard>
         ))}
