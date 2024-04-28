@@ -8,6 +8,7 @@ import AllArt from "../Component/AllArt";
 import AddCraft from "../Component/AddCraft";
 import MyArt from "../Component/MyArt";
 import PrivateRoute from "../Component/PrivateRoute";
+import UpdateCraft from "../Component/UpdateCraft";
 
 const router = createBrowserRouter([
   {
@@ -18,7 +19,7 @@ const router = createBrowserRouter([
       {
         path: "/home",
         element: <Home></Home>,
-        loader:()=>fetch('http://localhost:5000/craft')
+        loader: () => fetch("http://localhost:5000/craft"),
       },
       {
         path: "/login",
@@ -31,7 +32,7 @@ const router = createBrowserRouter([
       {
         path: "/all-art",
         element: <AllArt></AllArt>,
-        loader:()=>fetch('http://localhost:5000/craft')
+        loader: () => fetch("http://localhost:5000/craft"),
       },
       {
         path: "/add-carft",
@@ -44,11 +45,18 @@ const router = createBrowserRouter([
       {
         path: "/my-art",
         element: (
-          <PrivateRoute>
+          <PrivateRoute> 
             <MyArt></MyArt>
           </PrivateRoute>
         ),
-        
+      },
+      {
+        path: "/updatecraft/:id",
+        element: (
+          <PrivateRoute>
+            <UpdateCraft></UpdateCraft>
+          </PrivateRoute>
+        ),
       },
     ],
   },

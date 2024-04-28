@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import { AuthContex } from "../Firebase/Authprovider";
+import { Link } from "react-router-dom";
 
 const MyArt = () => {
   const { user } = useContext(AuthContex) || {};
@@ -53,7 +54,7 @@ const MyArt = () => {
                     </div>
                   
                   <div className="flex justify-between ">
-                    <button className="btn bg-green-500  ">Update</button>
+                   <Link to={`/updatecraft/${p._id}`}>  <button className="btn bg-green-500  ">Update</button></Link>
                     <button className=" btn bg-red-500 text-white ">Delete</button>
                   </div>
                 </div>
