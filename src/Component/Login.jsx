@@ -49,7 +49,7 @@ const Login = () => {
 
 
   return (
-    <div>
+    <div className="mx-3">
 <Helmet>
         <title>DREAM ART | Login</title>
       </Helmet>

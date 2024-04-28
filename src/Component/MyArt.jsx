@@ -36,7 +36,7 @@ const MyArt = () => {
   };
 
   return (
-    <div>
+    <div className="mx-3">
       <Helmet>
         <title>DREAM ART | My Art</title>
       </Helmet>

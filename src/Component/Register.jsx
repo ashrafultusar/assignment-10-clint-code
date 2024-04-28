@@ -50,7 +50,7 @@ const Register = () => {
   };
 
   return (
-    <div>
+    <div className="mx-3">
       <Helmet>
         <title>DREAM ART | Register</title>
       </Helmet>

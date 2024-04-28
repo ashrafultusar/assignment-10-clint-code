@@ -1,13 +1,32 @@
 import { FaFacebook, FaInstagram } from "react-icons/fa";
 import Marquee from "react-fast-marquee";
+import { Typewriter } from 'react-simple-typewriter'
+
+
 
 const HappyCastomer = () => {
   return (
-    <div className="my-16 bg-[#f3f3f3] py-16 ">
+   
+<div className="my-16 bg-[#f3f3f3] py-16 ">
       <div className="text-center pb-8">
-        <h1 className="text-2xl md:text-5xl font-semibold pb-2 underline">
-          Meet Our Awasem Crafter
-        </h1>
+
+      <h1 className="text-5xl font-semibold mb-4 " style={{ paddingTop: '5rem', margin: 'auto 0', fontWeight: 'semebold' }}>
+      Meet Our world class{' '}
+        <span style={{ color: 'red', fontWeight: 'bold' }}>
+          {/* Style will be inherited from the parent element */}
+          <Typewriter 
+            words={['Crafter', 'Crafter', 'Crafter', 'Crafter']}
+            loop={5}
+            cursor
+            cursorStyle='_'
+            typeSpeed={70}
+            deleteSpeed={50}
+            delaySpeed={1000}
+            
+          />
+        </span>
+      </h1>
+
         <p className="md:text-xl">
           "World-class artistry and craftsmanship intertwine to form the
           pinnacle of professional excellence, where each stroke of the brush
@@ -107,6 +126,8 @@ const HappyCastomer = () => {
 
     
     </div>
+  
+    
   );
 };
 

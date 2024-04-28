@@ -3,6 +3,9 @@ import { useContext } from "react";
 import { Helmet } from "react-helmet-async";
 import Swal from "sweetalert2";
 import { AuthContex } from "../Firebase/Authprovider";
+import { Typewriter } from 'react-simple-typewriter'
+
+
 
 const AddCraft = () => {
   const { user } = useContext(AuthContex)||{};
@@ -63,15 +66,33 @@ console.log(user)
   };
 
   return (
-    <div>
+    <div className="mx-3">
       <Helmet>
         <title>DREAM ART | Add Card</title>
       </Helmet>
 
       <div>
-        <h1 className="text-center text-3xl font-semibold">
-          Add Your Favourite Craft
-        </h1>
+        <div className="mb-4 text-center">
+          
+      <h1 className="text-5xl  font-semibold mb-4 " style={{ paddingTop: '5rem', margin: 'auto 0', fontWeight: 'semebold' }}>
+      Add Your Favourite{' '}
+        <span style={{ color: 'red', fontWeight: 'bold' }}>
+          {/* Style will be inherited from the parent element */}
+          <Typewriter
+            words={['Craft', 'Craft', 'Craft', 'Craft']}
+            loop={5}
+            cursor
+            cursorStyle='_'
+            typeSpeed={70}
+            deleteSpeed={50}
+            delaySpeed={1000}
+            
+          />
+        </span>
+      </h1>
+</div>
+
+        
 
         <div className=" bg-base-200">
           <form onSubmit={handelAddCraft}>

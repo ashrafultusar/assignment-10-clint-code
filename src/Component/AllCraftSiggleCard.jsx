@@ -16,7 +16,7 @@ const AllCraftSiggleCard = ({ craft }) => {
 //   })
 
   return (
-    <div>
+    <div className="mx-3">
       <div className="card h-[420px] bg-base-100 shadow-xl">
         <figure>
           <img src={photo} alt="Shoes" />

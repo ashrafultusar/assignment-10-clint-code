@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const CraftCard = ({ craft }) => {
   // console.log(craft);
   const { photo, subcategoryName, stockStatus, itemName } = craft;
@@ -13,7 +15,11 @@ const CraftCard = ({ craft }) => {
           <h2 className="text-sm font-semibold">{subcategoryName}</h2>
           <p>{stockStatus}</p>
           <div className="card-actions ">
-            <button className="btn w-full bg-green-500">View Detiels</button>
+            {/* <button className="btn w-full bg-green-500">View Detiels</button> */}
+
+            <Link to={`/viewDetails/${craft._id}`}>
+              <button className="btn w-full bg-green-500">View Detiels</button>
+            </Link>
           </div>
         </div>
       </div>

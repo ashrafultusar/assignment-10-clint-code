@@ -1,17 +1,23 @@
-import React from 'react';
+import Lottie from "lottie-react";
 
 const Slider = () => {
     return (
-        <div className=''>
-          <div className="carousel w-full rounded-md">
-  <div id="slide1" className="carousel-item relative w-full">
+      <div className=''>
+        
+     
+
+
+         <div className="carousel w-full rounded-md">
+  <div id="slide1" className="carousel-item  relative w-full">
     <img src="https://i.ibb.co/7JfRFw4/wildflowers-with-a-view-of-dublin-dunleary-a-nicholl.jpg
 " className="bg-cover w-full h-[430px]" />
     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
       <a href="#slide4" className="btn btn-circle">❮</a> 
       <a href="#slide2" className="btn btn-circle">❯</a>
     </div>
-  </div> 
+          </div> 
+          
+          
   <div id="slide2" className="carousel-item relative w-full">
     <img src="https://i.ibb.co/VwDv7MG/mountain-view-1.jpg" className="w-full h-[430px]" />
     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
