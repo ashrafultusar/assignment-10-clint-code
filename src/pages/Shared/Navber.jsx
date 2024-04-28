@@ -124,8 +124,8 @@ const Navber = () => {
               <div className="tooltip tooltip-left" data-tip={ user.displayName}>
             <img
               className="w-12 rounded-full"
-              alt="Tailwind CSS Navbar component"
-              src={user?.photoURL|| <img alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />}
+              alt="img"
+              src={user?.photoURL || <img alt="img" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />}
             />
             </div>
               <div>
@@ -137,7 +137,7 @@ const Navber = () => {
             <div><Link to={"/login"}>
             <button className="btn  bg-green-500">Login</button>
           </Link>         
-              </div><div><Link to={"/login"}>
+              </div><div><Link to={"/register"}>
             <button className="btn  bg-green-500">Register</button>
           </Link>         
               </div>

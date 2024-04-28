@@ -23,6 +23,8 @@ console.log(user)
     const email = form.email.value;
     const name = form.name.value;
     const id = user.email;
+
+    
     const newCraft = {
       photo,
       itemName,
@@ -48,7 +50,7 @@ console.log(user)
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         if (data.insertedId) {
           Swal.fire({
             title: "success!",
