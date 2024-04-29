@@ -66,10 +66,10 @@ const MyArt = () => {
       <div className="mb-24 mt-12 text-center">
       <details className="dropdown">
   <summary className="m-1 bg-green-500 btn text-xl font-bold">Customization</summary>
-  <ul className="p-2 shadow menu dropdown-content z-[1] rounded-box w-44 pl-16 bg-green-500">
-    <li className="text-[18px] font-semibold" onClick={()=>handelFilter('all')}><a>All</a></li>
-    <li className="text-[18px] font-semibold" onClick={()=>handelFilter('yes')}><a>Yes</a></li>
-    <li className="text-[18px] font-semibold" onClick={()=>handelFilter('no')}><a>No</a></li>
+  <ul className="p-2 shadow menu dropdown-content z-[1] rounded-box w-44  bg-green-500">
+    <li className="text-[18px]  font-semibold" onClick={()=>handelFilter('all')}><a className="pl-14">All</a></li>
+    <li className="text-[18px] font-semibold" onClick={()=>handelFilter('yes')}><a className="pl-14">Yes</a></li>
+    <li className="text-[18px] font-semibold" onClick={()=>handelFilter('no')}><a className="pl-14">No</a></li>
   </ul>
 </details>
       </div>

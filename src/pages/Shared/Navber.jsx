@@ -22,7 +22,6 @@ const Navber = () => {
   }
   
 
-  
 
   useEffect(() => {
     localStorage.setItem('them', theme);
