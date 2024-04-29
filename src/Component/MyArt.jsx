@@ -19,7 +19,7 @@ const MyArt = () => {
     } else if (e === "yes") {
       const yes = item.filter((user) => user.customization === "Yes");
       setFilter(yes);
-    } else if (filter === "no") {
+    } else if (e === "no") {
       const no = item.filter((user) => user.customization === "No");
       setFilter(no);
     }
