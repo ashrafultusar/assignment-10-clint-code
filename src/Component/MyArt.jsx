@@ -28,7 +28,7 @@ const MyArt = () => {
   // update section
   useEffect(() => {
     if (user) {
-      fetch(`https://art-and-craft-store-server-ioz1o3buw.vercel.app/myArt/${user?.email}`)
+      fetch(`https://art-and-craft-store-server-psi.vercel.app/myArt/${user?.email}`)
         .then((res) => res.json())
         .then((data) => {
           setItem(data);
@@ -49,7 +49,7 @@ const MyArt = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`https://art-and-craft-store-server-ioz1o3buw.vercel.app/delete/${id}`, {
+        fetch(`https://art-and-craft-store-server-psi.vercel.app/delete/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
