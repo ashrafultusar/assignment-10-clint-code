@@ -44,7 +44,7 @@ console.log(user)
 
     // console.log(newCraft);
 
-    fetch("http://localhost:5000/craft", {
+    fetch("https://art-and-craft-store-server-ioz1o3buw.vercel.app/craft", {
       method: "POST",
       headers: {
         "content-type": "application/json",

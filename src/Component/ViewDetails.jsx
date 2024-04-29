@@ -10,7 +10,7 @@ const ViewDetails = () => {
     console.log(view)
 
     useEffect(() => {
-        fetch(`http://localhost:5000/updateCraft/${id}`)
+        fetch(`https://art-and-craft-store-server-ioz1o3buw.vercel.app/updateCraft/${id}`)
             .then(res => res.json())
             .then(data => {
             setView(data)

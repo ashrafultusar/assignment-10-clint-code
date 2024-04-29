@@ -20,7 +20,7 @@ const router = createBrowserRouter([
       {
         path: "/home",
         element: <Home></Home>,
-        loader: () => fetch("http://localhost:5000/craft"),
+        loader: () => fetch("https://art-and-craft-store-server-ioz1o3buw.vercel.app/craft"),
       },
       {
         path: "/login",
@@ -33,7 +33,7 @@ const router = createBrowserRouter([
       {
         path: "/all-art",
         element: <AllArt></AllArt>,
-        loader: () => fetch("http://localhost:5000/craft"),
+        loader: () => fetch("https://art-and-craft-store-server-ioz1o3buw.vercel.app/craft"),
       },
       {
         path: "/add-carft",

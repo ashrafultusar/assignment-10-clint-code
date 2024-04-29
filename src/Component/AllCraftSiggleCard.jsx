@@ -7,7 +7,7 @@ const AllCraftSiggleCard = ({ craft }) => {
 //   const [item,setItem]=useState([])
 // console.log(item)
 //   useEffect(() => {
-//     fetch(`http://localhost:5000/viewDetails/${craft}`)
+//     fetch(`https://art-and-craft-store-server-ioz1o3buw.vercel.app/viewDetails/${craft}`)
 //       .then((res) => res.json())
 //       .then((data) => {
 //         setItem(data)
