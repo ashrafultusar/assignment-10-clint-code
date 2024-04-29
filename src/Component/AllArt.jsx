@@ -17,7 +17,7 @@ const AllArt = () => {
 
             <div className=" gap-6 my-12">
              
-                <div className='flex justify-between items-center text-[20px] font-bold mb-4 bg-rose-200 py-2 px-4'>
+                <div className='flex justify-between items-center text-[20px] font-bold mb-4 bg-rose-200 py-2 px-6'>
                     <h1>Photo</h1>
                     <h1>Item Name</h1>
                     <h1>Subcategory Name
@@ -33,9 +33,11 @@ const AllArt = () => {
                         <th className='text-[18px]'>{ craft.subcategoryName}</th>
                         <th className='text-[18px]'>{craft.stockStatus}</th> 
                         <th className="w-36">
-        <Link to={`/viewDetails/${craft._id}`}>
-              <button className="btn w-full bg-green-500 text-[16px] font-bold">View Detiels</button>
+                            <div className='pr-3'>
+                            <Link to={`/viewDetails/${craft._id}`}>
+              <button className="btn w-full bg-green-500 text-[16px]  font-bold">View Detiels</button>
             </Link>
+        </div>
         </th>
                     </tr>
                     

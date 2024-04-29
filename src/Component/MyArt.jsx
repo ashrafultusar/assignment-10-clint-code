@@ -3,33 +3,27 @@ import { useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import { AuthContex } from "../Firebase/Authprovider";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const MyArt = () => {
   const { user } = useContext(AuthContex) || {};
   console.log(user);
   const [item, setItem] = useState();
-  const[filter,setFilter]=useState([])
+  const [filter, setFilter] = useState([]);
   const [controle, setControle] = useState(false);
   console.log(item);
- 
 
-
-  const handelFilter = e => {
-    if (e === 'all') {
+  const handelFilter = (e) => {
+    if (e === "all") {
       setFilter(item);
+    } else if (e === "yes") {
+      const yes = item.filter((user) => user.customization === "Yes");
+      setFilter(yes);
+    } else if (filter === "no") {
+      const no = item.filter((user) => user.customization === "No");
+      setFilter(no);
     }
-    else if (e === 'yes') {
-      const yes = item.filter(user => user.customization === "Yes");
-      setFilter(yes)
-    }
-    else if (filter==='no') {
-      const no = item.filter(user => user.customization === "No");
-      setFilter(no)
-    }
-  }
-
-
-
+  };
 
   // update section
   useEffect(() => {
@@ -38,23 +32,40 @@ const MyArt = () => {
         .then((res) => res.json())
         .then((data) => {
           setItem(data);
-          setFilter(data)
-
+          setFilter(data);
         });
     }
   }, [user, controle]);
 
-  // delet section
+ 
   const handelDelet = (id) => {
-    fetch(`http://localhost:5000/delete/${id}`, {
-      method: "DELETE",
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.deletedCount > 0) {
-          setControle(!controle);
-        }
-      });
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        fetch(`http://localhost:5000/delete/${id}`, {
+          method: "DELETE",
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            console.log(data);
+            if (data.deletedCount > 0) {
+              Swal.fire({
+                title: "Deleted!",
+                text: "Your file has been deleted.",
+                icon: "success",
+              });
+              setControle(!controle);
+            }
+          });
+      }
+    });
   };
 
   return (
@@ -64,17 +75,32 @@ const MyArt = () => {
       </Helmet>
 
       <div className="mb-24 mt-12 text-center">
-      <details className="dropdown">
-  <summary className="m-1 bg-green-500 btn text-xl font-bold">Customization</summary>
-  <ul className="p-2 shadow menu dropdown-content z-[1] rounded-box w-44  bg-green-500">
-    <li className="text-[18px]  font-semibold" onClick={()=>handelFilter('all')}><a className="pl-14">All</a></li>
-    <li className="text-[18px] font-semibold" onClick={()=>handelFilter('yes')}><a className="pl-14">Yes</a></li>
-    <li className="text-[18px] font-semibold" onClick={()=>handelFilter('no')}><a className="pl-14">No</a></li>
-  </ul>
-</details>
+        <details className="dropdown">
+          <summary className="m-1 bg-green-500 btn text-xl font-bold">
+            Customization
+          </summary>
+          <ul className="p-2 shadow menu dropdown-content z-[1] rounded-box w-44  bg-green-500">
+            <li
+              className="text-[18px]  font-semibold"
+              onClick={() => handelFilter("all")}
+            >
+              <a className="pl-14">All</a>
+            </li>
+            <li
+              className="text-[18px] font-semibold"
+              onClick={() => handelFilter("yes")}
+            >
+              <a className="pl-14">Yes</a>
+            </li>
+            <li
+              className="text-[18px] font-semibold"
+              onClick={() => handelFilter("no")}
+            >
+              <a className="pl-14">No</a>
+            </li>
+          </ul>
+        </details>
       </div>
-
-      
 
       <div className="gap-6 my-12 grid grid-cols-1 md:grid-cols-3">
         {filter?.map((p) => (
