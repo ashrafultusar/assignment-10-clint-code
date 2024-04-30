@@ -10,6 +10,7 @@ import MyArt from "../Component/MyArt";
 import PrivateRoute from "../Component/PrivateRoute";
 import UpdateCraft from "../Component/UpdateCraft";
 import ViewDetails from "../Component/ViewDetails";
+import Artandcraftcatagories from "../pages/Home/Artandcraftcatagories";
 
 const router = createBrowserRouter([
   {
@@ -67,6 +68,11 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
       },
+      {
+        path: "/allCategorises",
+        element: <Artandcraftcatagories></Artandcraftcatagories>,
+        loader:()=>("https://art-and-craft-store-server-psi.vercel.app/categories")
+      }
     ],
   },
 ]);

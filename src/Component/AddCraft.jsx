@@ -10,7 +10,7 @@ import { Typewriter } from 'react-simple-typewriter'
 const AddCraft = () => {
   const { user } = useContext(AuthContex)||{};
   
-console.log(user)
+// console.log(user)
   const handelAddCraft = (e) => {
     e.preventDefault();
     const form = e.target;

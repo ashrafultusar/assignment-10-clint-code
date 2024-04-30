@@ -3,19 +3,20 @@ import CraftItems from "../../Component/CraftItems";
 import Slider from "../Shared/Slider";
 import HappyCastomer from "./HappyCastomer";
 import ShowCase from "./ShowCase";
-import { Fade, JackInTheBox, Slide, Zoom } from "react-awesome-reveal";
-import ArtCraftCategories from "../../Component/ArtCraftCategories";
+import { Fade} from "react-awesome-reveal";
+import Artandcraftcatagories from "./Artandcraftcatagories";
+
 
 
 const Home = () => {
     return (
       <div className="mx-3">
         <Helmet>
-        <title>DREAM ART | Home</title>
+        <title>DREAM ART || Home</title>
         </Helmet>
         <Fade><Slider></Slider></Fade>
         <fadeInUp><CraftItems></CraftItems></fadeInUp>
-        <ArtCraftCategories></ArtCraftCategories>
+       <Artandcraftcatagories></Artandcraftcatagories>
         <HappyCastomer></HappyCastomer>
         <slideInUp><ShowCase></ShowCase></slideInUp>
         
