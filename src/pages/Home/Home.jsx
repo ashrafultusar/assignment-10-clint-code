@@ -18,7 +18,7 @@ const Home = () => {
         <fadeInUp><CraftItems></CraftItems></fadeInUp>
        <Artandcraftcatagories></Artandcraftcatagories>
         <HappyCastomer></HappyCastomer>
-        <slideInUp><ShowCase></ShowCase></slideInUp>
+        <ShowCase></ShowCase>
         
         
         </div>

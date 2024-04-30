@@ -10,7 +10,7 @@ import MyArt from "../Component/MyArt";
 import PrivateRoute from "../Component/PrivateRoute";
 import UpdateCraft from "../Component/UpdateCraft";
 import ViewDetails from "../Component/ViewDetails";
-import Artandcraftcatagories from "../pages/Home/Artandcraftcatagories";
+import AllCtgDetails from "../SingleCardComponent/AllCtgDetails";
 
 const router = createBrowserRouter([
   {
@@ -21,7 +21,8 @@ const router = createBrowserRouter([
       {
         path: "/home",
         element: <Home></Home>,
-        loader: () => fetch("https://art-and-craft-store-server-psi.vercel.app/craft"),
+        loader: () =>
+          fetch("https://art-and-craft-store-server-psi.vercel.app/craft"),
       },
       {
         path: "/login",
@@ -34,7 +35,8 @@ const router = createBrowserRouter([
       {
         path: "/all-art",
         element: <AllArt></AllArt>,
-        loader: () => fetch("https://art-and-craft-store-server-psi.vercel.app/craft"),
+        loader: () =>
+          fetch("https://art-and-craft-store-server-psi.vercel.app/craft"),
       },
       {
         path: "/add-carft",
@@ -68,11 +70,6 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
       },
-      {
-        path: "/allCategorises",
-        element: <Artandcraftcatagories></Artandcraftcatagories>,
-        loader:()=>("https://art-and-craft-store-server-psi.vercel.app/categories")
-      }
     ],
   },
 ]);

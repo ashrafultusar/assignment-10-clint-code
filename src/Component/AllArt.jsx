@@ -1,8 +1,7 @@
-import React from 'react';
+
 import { Helmet } from 'react-helmet-async';
 import { Link, useLoaderData } from 'react-router-dom';
-import CraftCard from '../pages/Home/CraftCard';
-import AllCraftSiggleCard from './AllCraftSiggleCard';
+
 
 const AllArt = () => {
 
@@ -22,7 +21,7 @@ const AllArt = () => {
                     <h1>Item Name</h1>
                     <h1>Subcategory Name
 </h1>
-                    <h1>Details</h1>
+                    <h1>Details</h1> 
                 </div>
 
                 {crafts.map((craft) => (
@@ -34,7 +33,7 @@ const AllArt = () => {
                         <th className='text-[18px]'>{craft.stockStatus}</th> 
                         <th className="w-36">
                             <div className='pr-3'>
-                            <Link to={`/viewDetails/${craft._id}`}>
+                            <Link to={`/viewDetails/${craft._id}`}> 
               <button className="btn w-full bg-green-500 text-[16px]  font-bold">View Detiels</button>
             </Link>
         </div>

@@ -6,7 +6,7 @@ const CraftCard = ({ craft }) => {
 
   return (
     <div>
-      <div className="card h-[420px] bg-base-100 shadow-xl">
+      <div className="card h-[420px] bg-base-100 shadow-xl"> 
         <figure>
           <img src={photo} alt="Shoes" />
         </figure>

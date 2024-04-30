@@ -11,7 +11,7 @@ const CraftItems = () => {
         <title>DREAM ART | Craft Items</title>
       </Helmet>
 
-      <div>
+      <div> 
         <h1 className="text-4xl font-semibold mb-6 text-center">
           Best Selling Product
         </h1>

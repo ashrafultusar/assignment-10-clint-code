@@ -7,11 +7,11 @@ import Swal from "sweetalert2";
 
 const MyArt = () => {
   const { user } = useContext(AuthContex) || {};
-  console.log(user);
+  // console.log(user);
   const [item, setItem] = useState();
   const [filter, setFilter] = useState([]);
   const [controle, setControle] = useState(false);
-  console.log(item);
+  // console.log(item);
 
   const handelFilter = (e) => {
     if (e === "all") {
