@@ -5,7 +5,7 @@ import AllSingleCatagorie from "../../SingleCardComponent/AllSingleCatagorie";
 const Artandcraftcatagories = () => {
 
     const [allcatagorie, setAllcatagorie] = useState([]);
-    console.log(allcatagorie)
+    
     
     useEffect(() => {
         fetch(`https://art-and-craft-store-server-psi.vercel.app/categories`)

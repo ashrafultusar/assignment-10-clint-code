@@ -70,6 +70,10 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
       },
+      {
+        path: "/allCDetails/:id",
+        element:<AllCtgDetails></AllCtgDetails>
+      }
     ],
   },
 ]);
