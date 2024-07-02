@@ -24,3 +24,40 @@ The user can customize the art and crafts of his choice along with shopping
 =>React-simple-typewriter
 
 =>Lottie React
+
+
+
+
+## Description
+
+
+
+## Technologies Used
+
+- HTML
+- Tailwind CSS
+- JavaScript
+- React
+- Node.js
+- Firebase
+- MongoDB
+- Express.js
+
+## Getting Started
+
+Follow these steps to clone and run the project on your local machine.
+
+### Prerequisites
+
+Make sure you have the following installed:
+
+- [Node.js](https://nodejs.org/) (which includes npm)
+- [MongoDB](https://www.mongodb.com/)
+- [Firebase CLI](https://firebase.google.com/docs/cli) (if needed for your project)
+
+### Installation
+
+1. **Clone the repository**
+
+   ```sh
+   git clone https://github.com/yourusername/your-repo-name.git
