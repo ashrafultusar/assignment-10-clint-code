@@ -3,7 +3,7 @@
 ## Live Link
 [Visit D-ART](https://art-and-craft-authentaction.web.app/home)
 
-## Overview
+## Description
 D-ART is an art and craft-related website where all kinds of man-made art and crafts are sold. It is a multi-dimensional platform that allows users to:
 
 - Browse and shop for various art and craft items.
@@ -24,13 +24,6 @@ D-ART is an art and craft-related website where all kinds of man-made art and cr
 - Firebase
 - MongoDB
 - Express.js
-
-
-
-
-
-## Description
-
 
 
 ## Technologies Used
@@ -68,5 +61,4 @@ Make sure you have the following installed:
 cd your-repo-name
 3. **Install dependencies**
 
-``sh
 npm install
