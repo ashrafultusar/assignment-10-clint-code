@@ -1,29 +1,30 @@
-=>Website Themes: (Art & Craft Store)
+# D-ART
 
-=>Website Name: D-ART
+## Live Link
+[Visit D-ART](https://art-and-craft-authentaction.web.app/home)
 
-=>Live Link: https://art-and-craft-authentaction.web.app/home
+## Overview
+D-ART is an art and craft-related website where all kinds of man-made art and crafts are sold. It is a multi-dimensional platform that allows users to:
 
+- Browse and shop for various art and craft items.
+- Customize the art and crafts of their choice.
+- Access certain sections of the website with a user account login.
+- Become a merchant and sell their own art and crafts.
 
-=>This is an art and craft related website.
+## Npm Packages Used
+- [react-simple-typewriter](https://www.npmjs.com/package/react-simple-typewriter)
+- [Lottie React](https://www.npmjs.com/package/lottie-react)
 
-=>Basically all kinds of man-made art and craft are sold here
+## Technologies Used
+- HTML
+- Tailwind CSS
+- JavaScript
+- React
+- Node.js
+- Firebase
+- MongoDB
+- Express.js
 
-=>There are certain sections of our web site that cannot be accessed without a user account login
-
-=>Anyone can become a merchant and sell your art and crafts on this website
-
-=>Finally it can be said that it is a multi-dimensional web site
-You sent
-The user can customize the art and crafts of his choice along with shopping
-
-
-
-**Npm package uses:
-
-=>React-simple-typewriter
-
-=>Lottie React
 
 
 
@@ -61,3 +62,11 @@ Make sure you have the following installed:
 
    ```sh
    git clone https://github.com/yourusername/your-repo-name.git
+2. **Navigate to the project directory**
+
+```sh
+cd your-repo-name
+3. **Install dependencies**
+
+``sh
+npm install
