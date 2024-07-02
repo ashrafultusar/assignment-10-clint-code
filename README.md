@@ -64,7 +64,7 @@ cd your-repo-name
 npm install
 
 4. **Replace mongodb url**
-```sh
+
 Replace placeholders like `yourusername` and `your-repo-name` with the actual values for your GitHub repository. Additionally, fill in the sections like "Description," "Deployment," "Usage," "Contributing," "License," and "Acknowledgments" with the relevant information for your project.
 
 4. **Set up environment variables**
