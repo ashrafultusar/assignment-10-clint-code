@@ -11,6 +11,23 @@ D-ART is an art and craft-related website where all kinds of man-made art and cr
 - Access certain sections of the website with a user account login.
 - Become a merchant and sell their own art and crafts.
 
+
+## Features
+
+### Craft
+- Users can upload any art of their choice.
+- Users must be registered and logged in to upload art.
+
+### All Art
+- Users can view all posts, including those uploaded by themselves and by other users.
+
+### My Art
+- Users can view only their own uploaded posts.
+- Users can delete and update their own posts.
+
+
+
+
 ## Npm Packages Used
 - [react-simple-typewriter](https://www.npmjs.com/package/react-simple-typewriter)
 - [Lottie React](https://www.npmjs.com/package/lottie-react)
