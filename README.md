@@ -26,7 +26,7 @@ D-ART is an art and craft-related website where all kinds of man-made art and cr
 - Express.js
 
 
-## Getting Started
+## Run Your Local Computer 
 
 Follow these steps to clone and run the project on your local machine.
 
