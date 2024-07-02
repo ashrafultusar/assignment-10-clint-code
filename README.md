@@ -26,17 +26,6 @@ D-ART is an art and craft-related website where all kinds of man-made art and cr
 - Express.js
 
 
-## Technologies Used
-
-- HTML
-- Tailwind CSS
-- JavaScript
-- React
-- Node.js
-- Firebase
-- MongoDB
-- Express.js
-
 ## Getting Started
 
 Follow these steps to clone and run the project on your local machine.
