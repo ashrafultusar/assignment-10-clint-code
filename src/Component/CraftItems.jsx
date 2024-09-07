@@ -15,7 +15,7 @@ const CraftItems = () => {
         <h1 className="text-4xl font-semibold mb-6 text-center">
           Best Selling Product
         </h1>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {crafts.slice(0, 6).map((craft) => (
             <CraftCard key={craft._id} craft={craft}></CraftCard>
           ))}
