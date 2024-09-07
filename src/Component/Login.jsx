@@ -10,8 +10,8 @@ const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
   const { signInUser, googleSignIn, githubSignIn } = useContext(AuthContex);
   const navigate = useNavigate();
-  const location=useLocation()
-  const from = location?.state || '/'; 
+  const location = useLocation();
+  const from = location?.state || "/";
 
   const {
     register,
@@ -23,34 +23,28 @@ const Login = () => {
   const onSubmit = (data) => {
     const { email, password } = data;
     signInUser(email, password)
-    .then((result) => {
-      if (result.user) {
-        navigate(from)
-       
-    }
-  })
+      .then((result) => {
+        if (result.user) {
+          navigate(from);
+        }
+      })
       .catch((error) => {
         console.log(error);
       });
   };
 
-
-
   const handelSocialLogin = (socialProvider) => {
-    socialProvider()
-      .then((result) => {
-        if (result.user) {
-          navigate(from)
-          toast.success("Login successfully!");
+    socialProvider().then((result) => {
+      if (result.user) {
+        navigate(from);
+        toast.success("Login successfully!");
       }
     });
   };
 
-
-
   return (
     <div className="mx-3">
-<Helmet>
+      <Helmet>
         <title>DREAM ART | Login</title>
       </Helmet>
 
@@ -103,6 +97,7 @@ const Login = () => {
                   )}
                 </span>
               </div>
+              
               <div className="divider">OR</div>
 
               <div className="flex">
@@ -116,7 +111,7 @@ const Login = () => {
                 </div>
                 <div data-aos="zoom-in-left" data-aos-duration="1000">
                   <button
-                    onClick={() =>handelSocialLogin (githubSignIn)}
+                    onClick={() => handelSocialLogin(githubSignIn)}
                     className="btn font-bold text-[13px] border border-orange-400 text-orange-600"
                   >
                     <FaGithub></FaGithub> GitHub

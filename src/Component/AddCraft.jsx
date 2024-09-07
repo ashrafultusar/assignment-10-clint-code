@@ -44,7 +44,7 @@ const AddCraft = () => {
 
     // console.log(newCraft);
 
-    fetch("https://art-and-craft-store-server-psi.vercel.app/craft", {
+    fetch("http://localhost:5000/craft", {
       method: "POST",
       headers: {
         "content-type": "application/json",

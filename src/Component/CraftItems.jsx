@@ -6,7 +6,7 @@ const CraftItems = () => {
   const crafts = useLoaderData();
 
   return (
-    <div className="my-12">
+    <div className="my-12 container mx-auto">
       <Helmet>
         <title>DREAM ART | Craft Items</title>
       </Helmet>

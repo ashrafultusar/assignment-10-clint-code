@@ -9,7 +9,7 @@ const AllCtgDetails = () => {
 
   useEffect(() => {
     fetch(
-      `https://art-and-craft-store-server-psi.vercel.app/singleDetails/${id}`
+      `http://localhost:5000/singleDetails/${id}`
     )
       .then((res) => res.json())
       .then((data) => {

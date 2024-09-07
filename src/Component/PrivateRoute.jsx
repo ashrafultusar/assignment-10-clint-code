@@ -1,9 +1,9 @@
 import { useContext } from "react";
 import { AuthContex } from "../Firebase/Authprovider";
 import { Navigate, useLocation } from "react-router-dom";
-import { lazy } from "react";
 
 const PrivateRoute = ({ children }) => {
+  
   const { user,loading } = useContext(AuthContex);
   const location = useLocation();
 

@@ -23,7 +23,7 @@ const Register = () => {
     handleSubmit,
 
     formState: { errors },
-  } = useForm();
+  } = useForm(); 
 
   const onSubmit = (data) => {
     const { email, password } = data;

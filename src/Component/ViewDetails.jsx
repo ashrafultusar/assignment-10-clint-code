@@ -5,11 +5,11 @@ import { FcRating } from "react-icons/fc";
 const ViewDetails = () => {
   const { id } = useParams(); 
   // console.log(id);
-  const [view, setView] = useState({}); 
+  const [view, setView] = useState({});  
   // console.log(view);
 
   useEffect(() => {
-    fetch(`https://art-and-craft-store-server-psi.vercel.app/updateCraft/${id}`)
+    fetch(`http://localhost:5000/updateCraft/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setView(data);

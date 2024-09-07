@@ -3,26 +3,24 @@ import CraftItems from "../../Component/CraftItems";
 import Slider from "../Shared/Slider";
 import HappyCastomer from "./HappyCastomer";
 import ShowCase from "./ShowCase";
-import { Fade} from "react-awesome-reveal";
 import Artandcraftcatagories from "./Artandcraftcatagories";
 
-
-
 const Home = () => {
-    return (
-      <div className="mx-3">
-        <Helmet>
+  return (
+    <div className="">
+      <Helmet>
         <title>DREAM ART || Home</title>
-        </Helmet>
-        <Fade><Slider></Slider></Fade>
-        <fadeInUp><CraftItems></CraftItems></fadeInUp>
-       <Artandcraftcatagories></Artandcraftcatagories>
-        <HappyCastomer></HappyCastomer>
-        <ShowCase></ShowCase>
-        
-        
-        </div>
-    );
+      </Helmet>
+      <Slider></Slider>
+      <fadeInUp>
+        <CraftItems></CraftItems>
+      </fadeInUp>
+      <Artandcraftcatagories></Artandcraftcatagories>
+      <HappyCastomer></HappyCastomer>
+      <ShowCase></ShowCase>
+    </div>
+  );
 };
 
-export default Home;<h1>this is home</h1>
+export default Home;
+<h1>this is home</h1>;

@@ -4,7 +4,7 @@ import Footer from "../pages/Shared/Footer";
 
 const Root = () => {
   return (
-      <div className="max-w-6xl mx-auto">
+      <div className="bg-[#0a1316]">
           <Navber></Navber>
       <div className="min-h-screen"><Outlet></Outlet></div>
       <Footer></Footer>

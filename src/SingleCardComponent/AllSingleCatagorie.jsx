@@ -14,7 +14,7 @@ const AllSingleCatagorie = ({ allcgg }) => {
             <div className="card-body ">
               <h2 className="card-title ">{subcategory_Name}</h2>
             </div>
-          </div>
+          </div> 
           </Link>
       </div>
     </div>
