@@ -1,54 +1,131 @@
-import { Link } from "react-router-dom";
-import React, { useState } from "react";
-// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
+import { Autoplay, Navigation } from "swiper/modules";
 import "swiper/css";
-import "swiper/css/pagination";
 import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 
-// import required modules
-import { Pagination, Navigation, Autoplay } from "swiper/modules";
-
-const AllSingleCatagorie = ({ allcgg }) => {
-  const { _id, image, subcategory_Name } = allcgg;
-
-  const [swiperRef, setSwiperRef] = useState(null);
-
+const AllSingleCatagorie = () => {
   return (
     <div>
       <div>
-        {/* <Link to={`/allCDetails/${_id}`}>
-          <div className="card card-compact  bg-emerald-300 shadow-xl flex justify-center items-center">
-            <div>
-              <img className="h-52 w-full" src={image} alt="IMAGE" />
-            </div>
-            <div className="card-body ">
-              <h2 className="card-title ">{subcategory_Name}</h2>
-            </div>
-          </div>
-        </Link> */}
+        <div className="mt-[30px] md:mt-[50px] lg:mt-[70px] container mx-auto flex flex-col justify-center items-center gap-10 px-5 py-10">
+          {/* Multiple Swiper Slider */}
+          <Swiper
+            className="w-full"
+            modules={[Navigation, Autoplay]}
+            spaceBetween={20}
+            slidesPerView={1}
+            loop={true}
+            autoplay={{
+              delay: 2000,
+              disableOnInteraction: false,
+            }}
+            navigation
+            breakpoints={{
+              480: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+              },
+              640: {
+                slidesPerView: 2,
+                spaceBetween: 30,
+              },
+              1024: {
+                slidesPerView: 3,
+                spaceBetween: 40,
+              },
+            }}
+          >
+            {/* SwiperSlide 1 */}
+            <SwiperSlide
+              style={{
+                height: "350px",
+                background: `linear-gradient(to top, #000000cc, #000000d9), url('https://i.ibb.co/QP1WFyS/hand-4213487-1280.jpg')`,
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "cover",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+              className="bg-second border-[1px] border-lightBlack p-5 border-dotted font-body"
+            >
+              <span className="font-heading text-second text-xl font-semibold mb-3 uppercase">
+                Name 1
+              </span>
+              UserPost 1
+              <span className="mt-3 text-lightWhite text-[16px]">Date 1</span>
+            </SwiperSlide>
 
-        <Swiper
-          onSwiper={setSwiperRef}
-          slidesPerView={3}
-          centeredSlides={true}
-          spaceBetween={30}
-          pagination={{
-            type: "fraction",
-          }}
-          navigation={true}
-          autoplay={{
-            delay: 3000, // Time between slides (in milliseconds)
-            disableOnInteraction: false, // Keep autoplaying even after user interaction
-          }}
-          modules={[Pagination, Navigation, Autoplay]}
-          className="mySwiper"
-        >
-          <SwiperSlide >Slide 1</SwiperSlide>
-          
-        </Swiper>
+            {/* SwiperSlide 2 */}
+            <SwiperSlide
+              style={{
+                height: "350px",
+                background: `linear-gradient(to top, #000000cc, #000000d9), urlurl('https://i.ibb.co/QP1WFyS/hand-4213487-1280.jpg')`,
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "cover",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+              className="bg-second border-[1px] border-lightBlack p-5 border-dotted font-body"
+            >
+              <span className="font-heading text-second text-xl font-semibold mb-3 uppercase">
+                Name 2
+              </span>
+              UserPost 2
+              <span className="mt-3 text-lightWhite text-[16px]">Date 2</span>
+            </SwiperSlide>
+
+            {/* SwiperSlide 3 */}
+            <SwiperSlide
+              style={{
+                height: "350px",
+                background: `linear-gradient(to top, #000000cc, #000000d9), urlurl('https://i.ibb.co/QP1WFyS/hand-4213487-1280.jpg')`,
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "cover",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+              className="bg-second border-[1px] border-lightBlack p-5 border-dotted font-body"
+            >
+              <span className="font-heading text-second text-xl font-semibold mb-3 uppercase">
+                Name 3
+              </span>
+              UserPost 3
+              <span className="mt-3 text-lightWhite text-[16px]">Date 3</span>
+            </SwiperSlide>
+
+            {/* SwiperSlide 4 */}
+            <SwiperSlide
+              style={{
+                height: "350px",
+                background: `linear-gradient(to top, #000000cc, #000000d9), urlurl('https://i.ibb.co/QP1WFyS/hand-4213487-1280.jpg')`,
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "cover",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+              className="bg-second border-[1px] border-lightBlack p-5 border-dotted font-body"
+            >
+              <span className="font-heading text-second text-xl font-semibold mb-3 uppercase">
+                Name 3
+              </span>
+              UserPost 3
+              <span className="mt-3 text-lightWhite text-[16px]">Date 3</span>
+            </SwiperSlide>
+          </Swiper>
+        </div>
       </div>
     </div>
   );

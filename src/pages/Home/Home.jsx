@@ -3,7 +3,7 @@ import CraftItems from "../../Component/CraftItems";
 import Slider from "../Shared/Slider";
 import HappyCastomer from "./HappyCastomer";
 import ShowCase from "./ShowCase";
-import Artandcraftcatagories from "./Artandcraftcatagories";
+import AllSingleCatagorie from "../../SingleCardComponent/AllSingleCatagorie";
 
 const Home = () => {
   return (
@@ -11,13 +11,11 @@ const Home = () => {
       <Helmet>
         <title>DREAM ART || Home</title>
       </Helmet>
-      {/* slider */}
       <Slider></Slider>
-      {/* craft item */}
       <fadeInUp>
         <CraftItems></CraftItems>
       </fadeInUp>
-      <Artandcraftcatagories></Artandcraftcatagories>
+      <AllSingleCatagorie></AllSingleCatagorie>
       <HappyCastomer></HappyCastomer>
       <ShowCase></ShowCase>
     </div>
