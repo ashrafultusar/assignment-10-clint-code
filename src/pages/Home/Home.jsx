@@ -11,7 +11,9 @@ const Home = () => {
       <Helmet>
         <title>DREAM ART || Home</title>
       </Helmet>
+      {/* slider */}
       <Slider></Slider>
+      {/* craft item */}
       <fadeInUp>
         <CraftItems></CraftItems>
       </fadeInUp>
