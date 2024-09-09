@@ -11,7 +11,7 @@ const CraftCard = ({ craft }) => {
     rating,
     itemName,
   } = craft;
-  console.log(craft);
+
   return (
     <div>
       <div className="max-w-sm mx-auto bg-gradient-to-b from-teal-950 to-teal-900 rounded-lg shadow-lg overflow-hidden border">
@@ -33,7 +33,6 @@ const CraftCard = ({ craft }) => {
             {shortDescription.substring(0, 70)}...
           </p>
           <Link to={`/viewDetails/${craft._id}`}>
-            {" "}
             <button className="bg-teal-500 hover:bg-teal-600 text-white font-semibold py-2 px-4 rounded-lg shadow-md">
               Learn More →
             </button>

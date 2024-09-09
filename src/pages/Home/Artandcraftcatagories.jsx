@@ -13,7 +13,7 @@ const Artandcraftcatagories = () => {
   }, []);
 
   return (
-    <div>
+    <div className="container mx-auto">
       <h1 className="text-4xl font-bold mt-14 mb-6 text-center">
         All Categories
       </h1>
