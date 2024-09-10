@@ -4,6 +4,7 @@ import Slider from "../Shared/Slider";
 import HappyCastomer from "./HappyCastomer";
 import ShowCase from "./ShowCase";
 import AllSingleCatagorie from "../../SingleCardComponent/AllSingleCatagorie";
+import Statistics from "./Statistics";
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
         <CraftItems></CraftItems>
       </fadeInUp>
       <AllSingleCatagorie></AllSingleCatagorie>
+      <Statistics></Statistics>
       <HappyCastomer></HappyCastomer>
       <ShowCase></ShowCase>
     </div>
