@@ -50,9 +50,8 @@ const UpdateCraft = () => {
       headers: { "content-type": "application/json" },
       body: JSON.stringify(allUpdate),
     })
-
-      .then(res => res.json())
-      .then(data => {
+      .then((res) => res.json())
+      .then((data) => {
         if (data.modifiedCount) {
           Swal.fire({
             title: "success!",
@@ -61,12 +60,11 @@ const UpdateCraft = () => {
             confirmButtonText: "Close",
           });
         }
-    })
-
+      });
   };
 
   return (
-    <div>
+    <div className="container mx-auto pt-24">
       <div className=" bg-base-200">
         <h1 className="text-4xl font-semibold text-center pt-4">
           You Can Update You Add Card Information
@@ -82,7 +80,6 @@ const UpdateCraft = () => {
                 placeholder="Insert New Image Url"
                 name="photo"
                 className="input input-bordered w-full"
-                
               />
             </div>
             <div className="md:flex gap-6">
@@ -95,7 +92,6 @@ const UpdateCraft = () => {
                   placeholder="Item Name"
                   name="itemName"
                   className="input input-bordered  w-full"
-                  
                   defaultValue={update.itemName}
                 />
               </div>
@@ -111,7 +107,6 @@ const UpdateCraft = () => {
                   placeholder="stockStatus"
                   name="stockStatus"
                   className="input input-bordered w-full"
-                  
                   defaultValue={update.stockStatus}
                 />
               </div>
@@ -126,7 +121,6 @@ const UpdateCraft = () => {
                   placeholder="Subcategory Name"
                   name="subcategoryName"
                   className="input input-bordered w-full"
-                  
                   defaultValue={update.subcategoryName}
                 />
               </div>
@@ -139,7 +133,6 @@ const UpdateCraft = () => {
                   placeholder="Short Description"
                   name="shortDescription"
                   className="input input-bordered  w-full"
-                  
                   defaultValue={update.shortDescription}
                 />
               </div>
@@ -154,7 +147,6 @@ const UpdateCraft = () => {
                   placeholder="price"
                   name="price"
                   className="input input-bordered w-full"
-                  
                   defaultValue={update.price}
                 />
               </div>
@@ -167,7 +159,6 @@ const UpdateCraft = () => {
                   placeholder="rating"
                   name="rating"
                   className="input input-bordered  w-full"
-                  
                   defaultValue={update.rating}
                 />
               </div>
@@ -184,7 +175,6 @@ const UpdateCraft = () => {
                   placeholder="customization "
                   name="customization"
                   className="input input-bordered w-full"
-                  
                   defaultValue={update.customization}
                 />
               </div>
@@ -197,7 +187,6 @@ const UpdateCraft = () => {
                   name="processingTime"
                   placeholder="processing-time"
                   className="input input-bordered  w-full"
-                  
                   defaultValue={update.processingTime}
                 />
               </div>

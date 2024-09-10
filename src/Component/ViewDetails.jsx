@@ -17,7 +17,7 @@ const ViewDetails = () => {
   });
 
   return (
-    <div className="mx-5 my-10">
+    <div className="container mx-auto py-20">
       <div className=" rounded-xl  bg-[#fff2f2] shadow-xl">
         <figure>
           <img className="rounded-xl w-full" src={view.photo} alt="Shoes" />

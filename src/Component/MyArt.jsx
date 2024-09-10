@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet-async";
 import { AuthContex } from "../Firebase/Authprovider";
 import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
+import { FcRating } from "react-icons/fc";
 
 const MyArt = () => {
   const { user } = useContext(AuthContex) || {};
@@ -37,7 +38,6 @@ const MyArt = () => {
     }
   }, [user, controle]);
 
- 
   const handelDelet = (id) => {
     Swal.fire({
       title: "Are you sure?",
@@ -69,12 +69,12 @@ const MyArt = () => {
   };
 
   return (
-    <div className="mx-3">
+    <div className=" container mx-auto">
       <Helmet>
         <title>DREAM ART | My Art</title>
       </Helmet>
 
-      <div className="mb-24 mt-12 text-center">
+      <div className="mb-24 text-center">
         <details className="dropdown">
           <summary className="m-1 bg-green-500 btn text-xl font-bold">
             Customization
@@ -102,8 +102,8 @@ const MyArt = () => {
         </details>
       </div>
 
-      <div className="gap-6 my-12 grid grid-cols-1 md:grid-cols-3">
-        {filter?.map((p) => (
+      <div className="gap-6 my-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        {/* {filter?.map((p) => (
           <div key={p._id}>
             <div>
               <div className="card h-[420px] card-compact  bg-base-100 shadow-xl">
@@ -140,6 +140,42 @@ const MyArt = () => {
                     </button>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        ))} */}
+        {filter.map((p) => (
+          <div className="max-w-sm mx-auto bg-gradient-to-b from-teal-950 to-teal-900 rounded-lg shadow-lg overflow-hidden border">
+            <img
+              className="w-full h-64 object-cover p-4 rounded-2xl"
+              src={p.photo}
+              alt="Cyber Security"
+            />
+            <div className="p-6">
+              <div className="flex justify-between">
+                <p className="flex items-center gap-1 text-white">
+                  <FcRating />
+                  {p.rating}
+                </p>
+                <p className="text-white">{p.stockStatus}</p>
+              </div>
+              <h2 className="text-white text-2xl font-bold mb-4">
+                {p.itemName}
+              </h2>
+              <p className="text-gray-300 text-sm mb-6">
+                {p.shortDescription.substring(0, 70)}...
+              </p>
+              <div className="flex justify-between ">
+                <Link to={`/updatecraft/${p._id}`}>
+                  {" "}
+                  <button className="btn bg-green-500  ">Update</button>
+                </Link>
+                <button
+                  onClick={() => handelDelet(p._id)}
+                  className=" btn bg-red-500 text-white "
+                >
+                  Delete
+                </button>
               </div>
             </div>
           </div>
