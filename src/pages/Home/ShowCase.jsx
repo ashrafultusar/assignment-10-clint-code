@@ -5,7 +5,7 @@ import { FaAward } from "react-icons/fa6";
 
 const ShowCase = () => {
   return (
-    <div className=" md:flex justify-between items-center gap-6 bg-[#fff2f2] rounded-xl my-8">
+    <div className="container mx-auto md:flex justify-between items-center gap-6 bg-[#fff2f2] rounded-xl my-8">
       <div className="pl-4">
         <div>
           <h1
