@@ -1,4 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
+import { FcRating } from "react-icons/fc";
 import { Autoplay, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -41,7 +42,7 @@ const AllSingleCatagorie = () => {
             <SwiperSlide
               style={{
                 height: "350px",
-                background: `linear-gradient(to top, #000000cc, #000000d9), url('https://i.ibb.co/QP1WFyS/hand-4213487-1280.jpg')`,
+                background: `linear-gradient(to top, #000000cc, #000000d9), url('https://i.ibb.co.com/PxGV3Pn/among-the-sierra-nevada-albert-bierstadt.jpg')`,
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
@@ -52,18 +53,23 @@ const AllSingleCatagorie = () => {
               }}
               className="bg-second border-[1px] border-lightBlack p-5 border-dotted font-body"
             >
-              <span className="font-heading text-second text-xl font-semibold mb-3 uppercase">
-                Name 1
+              <span className="font-heading text-second text-xl font-semibold mb-3 uppercase text-white">
+                Landscape Painting
               </span>
-              UserPost 1
-              <span className="mt-3 text-lightWhite text-[16px]">Date 1</span>
+              <div className="flex items-center gap-2 text-white">
+                <FcRating />
+                5.0
+              </div>
+              <span className="mt-3 text-lightWhite text-[16px] text-white">
+                Mountain view canvas
+              </span>
             </SwiperSlide>
 
             {/* SwiperSlide 2 */}
             <SwiperSlide
               style={{
                 height: "350px",
-                background: `linear-gradient(to top, #000000cc, #000000d9), urlurl('https://i.ibb.co/QP1WFyS/hand-4213487-1280.jpg')`,
+                background: `linear-gradient(to top, #000000cc, #000000d9), url('https://i.ibb.co.com/sVyZ0jC/images.jpg')`,
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
@@ -74,18 +80,23 @@ const AllSingleCatagorie = () => {
               }}
               className="bg-second border-[1px] border-lightBlack p-5 border-dotted font-body"
             >
-              <span className="font-heading text-second text-xl font-semibold mb-3 uppercase">
-                Name 2
+              <span className="font-heading text-second text-xl font-semibold mb-3 uppercase text-white">
+                Portrait Drawing
               </span>
-              UserPost 2
-              <span className="mt-3 text-lightWhite text-[16px]">Date 2</span>
+              <div className="flex items-center gap-2 text-white">
+                <FcRating />
+                4.5
+              </div>
+              <span className="mt-3 text-lightWhite text-[16px] text-white">
+                Pencil Sketch Portrait
+              </span>
             </SwiperSlide>
 
             {/* SwiperSlide 3 */}
             <SwiperSlide
               style={{
                 height: "350px",
-                background: `linear-gradient(to top, #000000cc, #000000d9), urlurl('https://i.ibb.co/QP1WFyS/hand-4213487-1280.jpg')`,
+                background: `linear-gradient(to top, #000000cc, #000000d9), url('https://i.ibb.co.com/FhZzY6J/how-to-frame-watercolour-art.webp')`,
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
@@ -96,18 +107,23 @@ const AllSingleCatagorie = () => {
               }}
               className="bg-second border-[1px] border-lightBlack p-5 border-dotted font-body"
             >
-              <span className="font-heading text-second text-xl font-semibold mb-3 uppercase">
-                Name 3
+              <span className="font-heading text-second text-xl font-semibold mb-3 uppercase text-white">
+                Water colour Painting
               </span>
-              UserPost 3
-              <span className="mt-3 text-lightWhite text-[16px]">Date 3</span>
+              <div className="flex items-center gap-2 text-white">
+                <FcRating />
+                4.8
+              </div>
+              <span className="mt-3 text-lightWhite text-[16px] text-white">
+                Floral Watercolor Art
+              </span>
             </SwiperSlide>
 
             {/* SwiperSlide 4 */}
             <SwiperSlide
               style={{
                 height: "350px",
-                background: `linear-gradient(to top, #000000cc, #000000d9), urlurl('https://i.ibb.co/QP1WFyS/hand-4213487-1280.jpg')`,
+                background: `linear-gradient(to top, #000000cc, #000000d9), url('https://i.ibb.co.com/K7mDTD5/image-675-1.jpg')`,
                 backgroundPosition: "center",
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
@@ -118,11 +134,70 @@ const AllSingleCatagorie = () => {
               }}
               className="bg-second border-[1px] border-lightBlack p-5 border-dotted font-body"
             >
-              <span className="font-heading text-second text-xl font-semibold mb-3 uppercase">
-                Name 3
+              <span className="font-heading text-second text-xl font-semibold mb-3 uppercase text-white">
+                Oil Painting
               </span>
-              UserPost 3
-              <span className="mt-3 text-lightWhite text-[16px]">Date 3</span>
+              <div className="flex items-center gap-2 text-white">
+                <FcRating />
+                5.0
+              </div>
+              <span className="mt-3 text-lightWhite text-[16px] text-white">
+                Realistic Oil Portrait
+              </span>
+            </SwiperSlide>
+
+            {/* slider 5 */}
+            <SwiperSlide
+              style={{
+                height: "350px",
+                background: `linear-gradient(to top, #000000cc, #000000d9), url('https://i.ibb.co.com/g7bhx5k/hq720.jpg')`,
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "cover",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+              className="bg-second border-[1px] border-lightBlack p-5 border-dotted font-body"
+            >
+              <span className="font-heading text-second text-xl font-semibold mb-3 uppercase text-white">
+                Charcoal Sketching
+              </span>
+              <div className="flex items-center gap-2 text-white">
+                <FcRating />
+                5.0
+              </div>
+              <span className="mt-3 text-lightWhite text-[16px] text-white">
+                Figure Charcoal Sketch{" "}
+              </span>
+            </SwiperSlide>
+
+            {/* slider 6 */}
+            <SwiperSlide
+              style={{
+                height: "350px",
+                background: `linear-gradient(to top, #000000cc, #000000d9), url('https://i.ibb.co.com/6ZgRrKb/Learn-to-Draw-Cartoons.jpg')`,
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "cover",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+              className="bg-second border-[1px] border-lightBlack p-5 border-dotted font-body"
+            >
+              <span className="font-heading text-second text-xl font-semibold mb-3 uppercase text-white">
+                Cartoon Drawing{" "}
+              </span>
+              <div className="flex items-center gap-2 text-white">
+                <FcRating />
+                4.9
+              </div>
+              <span className="mt-3 text-lightWhite text-[16px] text-white">
+                Comic Strip Drawing
+              </span>
             </SwiperSlide>
           </Swiper>
         </div>
