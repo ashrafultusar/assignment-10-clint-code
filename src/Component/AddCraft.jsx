@@ -1,16 +1,13 @@
-
 import { useContext } from "react";
 import { Helmet } from "react-helmet-async";
 import Swal from "sweetalert2";
 import { AuthContex } from "../Firebase/Authprovider";
-import { Typewriter } from 'react-simple-typewriter'
-
-
+import { Typewriter } from "react-simple-typewriter";
 
 const AddCraft = () => {
-  const { user } = useContext(AuthContex)||{};
-  
-// console.log(user)
+  const { user } = useContext(AuthContex) || {};
+
+  // console.log(user)
   const handelAddCraft = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -27,7 +24,6 @@ const AddCraft = () => {
     const name = form.name.value;
     const id = user.email;
 
-    
     const newCraft = {
       photo,
       itemName,
@@ -39,7 +35,8 @@ const AddCraft = () => {
       customization,
       stockStatus,
       email,
-      name,id
+      name,
+      id,
     };
 
     // console.log(newCraft);
@@ -71,28 +68,31 @@ const AddCraft = () => {
         <title>DREAM ART | Add Card</title>
       </Helmet>
 
-      <div>
+      <div className="container mx-auto">
         <div className="mb-4 text-center">
-          
-      <h1 className="text-5xl  font-semibold mb-4 " style={{ paddingTop: '5rem', margin: 'auto 0', fontWeight: 'semebold' }}>
-      Add Your Favourite{' '}
-        <span style={{ color: 'red', fontWeight: 'bold' }}>
-          {/* Style will be inherited from the parent element */}
-          <Typewriter
-            words={['Craft', 'Craft', 'Craft', 'Craft']}
-            loop={5}
-            cursor
-            cursorStyle='_'
-            typeSpeed={70}
-            deleteSpeed={50}
-            delaySpeed={1000}
-            
-          />
-        </span>
-      </h1>
-</div>
-
-        
+          <h1
+            className="text-5xl text-white font-semibold mb-4 "
+            style={{
+              paddingTop: "5rem",
+              margin: "auto 0",
+              fontWeight: "semebold",
+            }}
+          >
+            Add Your Favourite{" "}
+            <span style={{ color: "red", fontWeight: "bold" }}>
+              {/* Style will be inherited from the parent element */}
+              <Typewriter
+                words={["Craft", "Craft", "Craft", "Craft"]}
+                loop={5}
+                cursor
+                cursorStyle="_"
+                typeSpeed={70}
+                deleteSpeed={50}
+                delaySpeed={1000}
+              />
+            </span>
+          </h1>
+        </div>
 
         <div className=" bg-base-200">
           <form onSubmit={handelAddCraft}>
