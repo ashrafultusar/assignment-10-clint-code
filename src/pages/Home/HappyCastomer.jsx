@@ -1,22 +1,22 @@
+
 import { FaFacebook, FaInstagram } from "react-icons/fa";
 import Marquee from "react-fast-marquee";
 import { Typewriter } from "react-simple-typewriter";
 
 const HappyCastomer = () => {
   return (
-    <div className="container mx-auto">
-      <div className="text-center pb-8 text-white">
+    <div className="container mx-auto sm:mt-[900px] mb-24 ">
+      <div className="text-center pb-8 text-white overflow-y-hidden overflow-x-hidden">
         <h1
           className="text-5xl font-semibold"
           style={{
             paddingTop: "5rem",
             margin: "auto 0",
-            fontWeight: "semebold",
+            fontWeight: "bold",
           }}
         >
           Meet Our world class{" "}
           <span style={{ color: "red", fontWeight: "bold" }}>
-            {/* Style will be inherited from the parent element */}
             <Typewriter
               words={["Crafter", "Crafter", "Crafter", "Crafter"]}
               loop={5}
@@ -29,29 +29,23 @@ const HappyCastomer = () => {
           </span>
         </h1>
         <p className="md:text-xl mt-2">
-          "World-class artistry and craftsmanship intertwine to form the
-          pinnacle of professional excellence, where each stroke of the brush
-          and every meticulous detail converge to create masterpieces that
-          transcend time. It's the fusion of creativity, skill, and dedication
-          that propels artisans to craft wonders that resonate with the soul and
-          inspire generations."
+          "World-class artistry and craftsmanship intertwine to form the pinnacle of professional excellence..."
         </p>
       </div>
 
       <div className="">
-        <Marquee speed={20}>
-
-          <div class="w-full mx-4 max-w-xs overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800">
+        <Marquee speed={20} pauseOnHover>
+          <div className="w-72 mx-4 overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800">
             <img
               className="object-cover w-full h-56"
               src="https://i.ibb.co/C2T6fbp/tile-focus-women.jpg"
-              alt=""
+              alt="Barbara"
             />
-            <div class="text-center">
+            <div className="text-center">
               <a
                 href="#"
-                class="block text-xl font-bold text-gray-800 dark:text-white"
-                tabindex="0"
+                className="block text-xl font-bold text-gray-800 dark:text-white"
+                tabIndex="0"
                 role="link"
               >
                 Barbara
@@ -63,17 +57,17 @@ const HappyCastomer = () => {
             </div>
           </div>
 
-          <div class="w-full mx-4 max-w-xs overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800">
+          <div className="w-72 mx-4 overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800">
             <img
               className="object-cover w-full h-56"
-              src="https://i.ibb.co.com/HNc227P/images-1.jpg"
-              alt=""
+              src="https://i.ibb.co/HNc227P/images-1.jpg"
+              alt="Kimberly Ride"
             />
-            <div class="text-center">
+            <div className="text-center">
               <a
                 href="#"
-                class="block text-xl font-bold text-gray-800 dark:text-white"
-                tabindex="0"
+                className="block text-xl font-bold text-gray-800 dark:text-white"
+                tabIndex="0"
                 role="link"
               >
                 Kimberly Ride
@@ -84,18 +78,18 @@ const HappyCastomer = () => {
               </div>
             </div>
           </div>
-          
-          <div class="w-full mx-4 max-w-xs overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800">
+
+          <div className="w-72 mx-4 overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800">
             <img
               className="object-cover w-full h-56"
               src="https://i.ibb.co/yhwD0wr/Woman-at-Lover-s-Bridge-Tanjung-Sepat-cropped.jpg"
-              alt=""
+              alt="Olivia"
             />
-            <div class="text-center">
+            <div className="text-center">
               <a
                 href="#"
-                class="block text-xl font-bold text-gray-800 dark:text-white"
-                tabindex="0"
+                className="block text-xl font-bold text-gray-800 dark:text-white"
+                tabIndex="0"
                 role="link"
               >
                 Olivia
@@ -107,17 +101,17 @@ const HappyCastomer = () => {
             </div>
           </div>
 
-          <div class="w-full mx-4 max-w-xs overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800">
+          <div className="w-72 mx-4 overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800">
             <img
               className="object-cover w-full h-56"
               src="https://i.ibb.co/s2YGKNL/young-bearded-man-with-striped-shirt-273609-5677.jpg"
-              alt=""
+              alt="Steven Jon"
             />
-            <div class="text-center">
+            <div className="text-center">
               <a
                 href="#"
-                class="block text-xl font-bold text-gray-800 dark:text-white"
-                tabindex="0"
+                className="block text-xl font-bold text-gray-800 dark:text-white"
+                tabIndex="0"
                 role="link"
               >
                 Steven Jon
@@ -129,17 +123,17 @@ const HappyCastomer = () => {
             </div>
           </div>
 
-          <div class="w-full mx-4 max-w-xs overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800">
+          <div className="w-72 mx-4 overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800">
             <img
               className="object-cover w-full h-56"
               src="https://i.ibb.co/YWS3hyx/Semi-Formal-Attire-For-Women-360x405-jpg.webp"
-              alt=""
+              alt="Isabella"
             />
-            <div class="text-center">
+            <div className="text-center">
               <a
                 href="#"
-                class="block text-xl font-bold text-gray-800 dark:text-white"
-                tabindex="0"
+                className="block text-xl font-bold text-gray-800 dark:text-white"
+                tabIndex="0"
                 role="link"
               >
                 Isabella
@@ -151,17 +145,17 @@ const HappyCastomer = () => {
             </div>
           </div>
 
-          <div class="w-full mx-4 max-w-xs overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800">
+          <div className="w-72 mx-4 overflow-hidden bg-white rounded-lg shadow-lg dark:bg-gray-800">
             <img
               className="object-cover w-full h-56"
               src="https://i.ibb.co/YW5P8fn/handsome-bearded-guy-posing-against-white-wall-273609-20597.jpg"
-              alt=""
+              alt="Devid"
             />
-            <div class="text-center">
+            <div className="text-center">
               <a
                 href="#"
-                class="block text-xl font-bold text-gray-800 dark:text-white"
-                tabindex="0"
+                className="block text-xl font-bold text-gray-800 dark:text-white"
+                tabIndex="0"
                 role="link"
               >
                 Devid
@@ -172,7 +166,6 @@ const HappyCastomer = () => {
               </div>
             </div>
           </div>
-      
         </Marquee>
       </div>
     </div>
@@ -180,3 +173,4 @@ const HappyCastomer = () => {
 };
 
 export default HappyCastomer;
+

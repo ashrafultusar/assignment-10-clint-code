@@ -5,6 +5,7 @@ import HappyCastomer from "./HappyCastomer";
 import ShowCase from "./ShowCase";
 import AllSingleCatagorie from "../../SingleCardComponent/AllSingleCatagorie";
 import Statistics from "./Statistics";
+import AboutUs from "./AboutUs";
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
       </fadeInUp>
       <AllSingleCatagorie></AllSingleCatagorie>
       <Statistics></Statistics>
+      <AboutUs></AboutUs>
       <HappyCastomer></HappyCastomer>
       <ShowCase></ShowCase>
     </div>
