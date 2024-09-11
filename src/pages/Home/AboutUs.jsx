@@ -1,6 +1,6 @@
 const AboutUs = () => {
   return (
-    <div className="mt-24 lg:mb-96 md:mb-64 sm:mb-[1400px]">
+    <div className="my-24">
       <div className="bg-gray-100">
         {/* <!-- Hero Section --> */}
         <div
@@ -19,9 +19,13 @@ const AboutUs = () => {
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Pellentesque ut dictum ligula.
               </p>
-              <button className="bg-transparent border border-white text-white py-2 px-6 rounded hover:bg-white hover:text-black transition">
-                Contact Us
-              </button>
+             
+              <button className="relative overflow-hidden bg-transparent border border-white text-white py-2 px-6 rounded transition duration-300 group">
+  <span className="absolute inset-0 bg-white translate-x-[-100%] transition-transform duration-300 ease-in-out group-hover:translate-x-0"></span>
+  <span className="relative z-10 group-hover:text-black">Contact Us</span>
+</button>
+
+             
             </div>
           </div>
 

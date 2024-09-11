@@ -5,7 +5,7 @@ import { Typewriter } from "react-simple-typewriter";
 
 const HappyCastomer = () => {
   return (
-    <div className="container mx-auto sm:mt-[900px] mb-24 ">
+    <div className="container mx-auto mt-96 ">
       <div className="text-center pb-8 text-white overflow-y-hidden overflow-x-hidden">
         <h1
           className="text-5xl font-semibold"
