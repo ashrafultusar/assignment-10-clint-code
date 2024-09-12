@@ -3,15 +3,17 @@ import React from 'react';
 const Footer = () => {
     return (
         <div>
-       <footer className="footer footer-center bg-[#585858] text-white rounded p-10">
-  <nav className="grid grid-flow-col gap-4">
+       <footer className="footer footer-center bg-[#111b1f] border-t-2 text-white rounded p-10">
+  <nav data-aos="fade-up"
+          data-aos-anchor-placement="top-bottom"
+          data-aos-duration="1000" className="grid grid-flow-col gap-4">
     <a className="link link-hover">About us</a>
     <a className="link link-hover">Contact</a>
     <a className="link link-hover">Jobs</a>
     <a className="link link-hover">Press kit</a>
   </nav>
   <nav>
-    <div className="grid grid-flow-col gap-4">
+    <div data-aos="zoom-in"  data-aos-duration="1000" className="grid grid-flow-col gap-4">
       <a>
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -47,7 +49,9 @@ const Footer = () => {
       </a>
     </div>
   </nav>
-  <aside>
+  <aside data-aos="fade-down"
+          data-aos-anchor-placement="top-bottom"
+          data-aos-duration="1000">
     <p>Copyright © {new Date().getFullYear()} - All right reserved by <a target='_blank' className='hover:text-blue-600' href="https://drive.google.com/file/d/10-Jz0sitUqTnfJnPK74Wqr4CdEDLC1f2/view?usp=drive_link">Ashraful Islam</a></p>
   </aside>
 </footer>

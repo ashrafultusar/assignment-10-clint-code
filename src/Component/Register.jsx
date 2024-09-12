@@ -2,6 +2,7 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContex } from "../Firebase/Authprovider";
 import { FaRegEye, FaEyeSlash } from "react-icons/fa";
+import { IoHomeOutline } from "react-icons/io5";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 import { Helmet } from "react-helmet-async";
@@ -13,7 +14,7 @@ const Register = () => {
   const { creatUser } = useContext(AuthContex);
   const navigate = useNavigate();
   const location = useLocation();
-  const from = location?.state || "/";
+  const from = location?.state || "/home";
 
   const {
     register,
@@ -57,30 +58,20 @@ const Register = () => {
       </Helmet>
 
       {/* Back to Home Button */}
-      <div className="absolute top-8 left-8 z-10">
-        <Link to="/home">
-          <button class="bg-[#1877F2] rounded-lg hover:bg-[#1877F2]/80 duration-300 transition-colors border border-transparent px-8 py-2.5">
-            <svg
-              class="w-5 h-5 sm:h-6 sm:w-6"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g clip-path="url(#clip0_3033_94669)">
-                <path
-                  d="M24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 17.9895 4.3882 22.954 10.125 23.8542V15.4688H7.07812V12H10.125V9.35625C10.125 6.34875 11.9166 4.6875 14.6576 4.6875C15.9701 4.6875 17.3438 4.92188 17.3438 4.92188V7.875H15.8306C14.34 7.875 13.875 8.80008 13.875 9.75V12H17.2031L16.6711 15.4688H13.875V23.8542C19.6118 22.954 24 17.9895 24 12Z"
-                  fill="white"
-                />
-              </g>
-              <defs>
-                <clipPath id="clip0_3033_94669">
-                  <rect width="24" height="24" fill="white" />
-                </clipPath>
-              </defs>
-            </svg>
-          </button>
-        </Link>
-      </div>
+   {/* Back to Home Button */}
+{/* Overlay */}
+<div className="absolute inset-0 bg-black opacity-70 z-0"></div>
+
+{/* Back to Home Button */}
+<div className="absolute top-8 left-8 z-20">
+  <Link to="/home">
+    <button className="bg-[#1877F2] rounded-lg hover:bg-[#1877F2]/80 duration-300 transition-colors border border-transparent px-6 py-2">
+    <IoHomeOutline className="text-2xl text-white" />
+    </button>
+  </Link>
+</div>
+
+
 
       <div className="relative z-10 flex justify-center items-center min-h-screen">
         <div className="bg-transparent p-8 w-full max-w-sm">

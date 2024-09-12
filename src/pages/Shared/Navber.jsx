@@ -72,10 +72,14 @@ const Navber = () => {
               </li>
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">D-ART</a>
+          <a data-aos="fade-down"
+          data-aos-anchor-placement="top-bottom"
+          data-aos-duration="1000" className="btn btn-ghost text-xl">D-ART</a>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1 text-xl font-bold">
+          <ul data-aos="fade-down"
+          data-aos-anchor-placement="top-bottom"
+          data-aos-duration="1200" className="menu menu-horizontal px-1 text-xl font-bold">
             <li>
               <NavLink
                 to="/home"
@@ -120,7 +124,9 @@ const Navber = () => {
         </div>
         <div className="navbar-end">
           {user ? (
-            <div className="flex gap-2">
+            <div data-aos="fade-down"
+            data-aos-anchor-placement="top-bottom"
+            data-aos-duration="1200" className="flex gap-2">
               <div className="tooltip tooltip-left" data-tip={user.displayName}>
                 <img
                   className="w-12 rounded-full"
@@ -131,7 +137,7 @@ const Navber = () => {
                   }
                 />
               </div>
-              <div>
+              <div className="flex items-center">
                 <button
                   onClick={logOut}
                   className="relative overflow-hidden bg-transparent border border-white text-white py-1 px-2 rounded transition duration-300 group"
@@ -144,7 +150,9 @@ const Navber = () => {
               </div>
             </div>
           ) : (
-            <div className="flex gap-1">
+            <div data-aos="fade-down"
+            data-aos-anchor-placement="top-bottom"
+            data-aos-duration="1200" className="flex gap-1">
               <div>
                 <NavLink to="/login">
                   <button className="relative overflow-hidden bg-transparent border border-white text-white py-1 px-2 rounded transition duration-300 group">

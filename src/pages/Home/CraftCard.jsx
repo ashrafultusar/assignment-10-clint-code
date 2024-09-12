@@ -14,7 +14,9 @@ const CraftCard = ({ craft }) => {
 
   return (
     <div>
-      <div className="max-w-sm mx-auto bg-gradient-to-b from-teal-950 to-teal-900 rounded-lg shadow-lg overflow-hidden border">
+      <div data-aos="fade-up"
+          data-aos-anchor-placement="top-bottom"
+          data-aos-duration="1500" className="hover:scale-[1.05] transition-all max-w-sm mx-auto bg-gradient-to-b from-teal-950 to-teal-900 rounded-lg shadow-lg overflow-hidden border">
         <img
           className="w-full h-64 object-cover p-4 rounded-2xl"
           src={photo}
@@ -34,7 +36,7 @@ const CraftCard = ({ craft }) => {
           </p>
           <Link to={`/viewDetails/${craft._id}`}>
             <button className="bg-teal-500 hover:bg-teal-600 text-white font-semibold py-2 px-4 rounded-lg shadow-md">
-              Learn More →
+              View More →
             </button>
           </Link>
         </div>

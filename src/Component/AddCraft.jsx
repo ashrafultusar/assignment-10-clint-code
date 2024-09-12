@@ -41,7 +41,7 @@ const AddCraft = () => {
 
     // console.log(newCraft);
 
-    fetch("http://localhost:5000/craft", {
+    fetch("https://art-and-craft-store-server-psi.vercel.app/craft", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -70,8 +70,10 @@ const AddCraft = () => {
 
       <div className="container mx-auto">
         <div className="mb-4 text-center">
-          <h1
-            className="text-5xl text-white font-semibold mb-4 "
+          <h1 data-aos="fade-down"
+          data-aos-anchor-placement="top-bottom"
+          data-aos-duration="1200" 
+            className="text-5xl text-white font-semibold py-8 "
             style={{
               paddingTop: "5rem",
               margin: "auto 0",
@@ -94,9 +96,11 @@ const AddCraft = () => {
           </h1>
         </div>
 
-        <div className=" bg-base-200">
-          <form onSubmit={handelAddCraft}>
-            <div className="p-10">
+        <div>
+          <form  onSubmit={handelAddCraft}>
+            <div data-aos="fade-up"
+          data-aos-anchor-placement="top-bottom"
+          data-aos-duration="1200" className="p-10 bg-base-200">
               <div className="form-control md:w-full">
                 <label className="label">
                   <span className="label-text">Image</span>

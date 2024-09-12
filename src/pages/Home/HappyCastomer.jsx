@@ -7,7 +7,9 @@ const HappyCastomer = () => {
   return (
     <div className="container mx-auto mt-96 ">
       <div className="text-center pb-8 text-white overflow-y-hidden overflow-x-hidden">
-        <h1
+        <h1 data-aos="fade-down"
+          data-aos-anchor-placement="top-bottom"
+          data-aos-duration="1200"
           className="text-5xl font-semibold"
           style={{
             paddingTop: "5rem",
@@ -28,7 +30,9 @@ const HappyCastomer = () => {
             />
           </span>
         </h1>
-        <p className="md:text-xl mt-2">
+        <p data-aos="fade-up"
+          data-aos-anchor-placement="top-bottom"
+          data-aos-duration="1200" className="md:text-xl mt-2">
           "World-class artistry and craftsmanship intertwine to form the pinnacle of professional excellence..."
         </p>
       </div>

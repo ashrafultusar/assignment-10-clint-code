@@ -9,7 +9,7 @@ const UpdateCraft = () => {
   const [update, setUpdate] = useState({});
 
   useEffect(() => {
-    fetch(`http://localhost:5000/updateCraft/${id}`)
+    fetch(`https://art-and-craft-store-server-psi.vercel.app/updateCraft/${id}`)
       .then((res) => res.json())
       .then(
         (data) => {
@@ -45,7 +45,7 @@ const UpdateCraft = () => {
       processingTime,
     };
 
-    fetch(`http://localhost:5000/updateCraft/${id}`, {
+    fetch(`https://art-and-craft-store-server-psi.vercel.app/updateCraft/${id}`, {
       method: "PUT",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(allUpdate),
@@ -65,12 +65,16 @@ const UpdateCraft = () => {
 
   return (
     <div className="container mx-auto pt-24">
-      <div className=" bg-base-200">
-        <h1 className="text-4xl font-semibold text-center pt-4">
+      <div className="">
+        <h1 data-aos="fade-down"
+          data-aos-anchor-placement="top-bottom"
+          data-aos-duration="1200" className="text-4xl font-semibold text-center text-white py-6">
           You Can Update You Add Card Information
         </h1>
         <form onSubmit={handelUpdate}>
-          <div className="p-10">
+          <div data-aos="fade-up"
+          data-aos-anchor-placement="top-bottom"
+          data-aos-duration="1200" className="px-10 pb-10 pt-2 bg-base-200">
             <div className="form-control md:w-full">
               <label className="label">
                 <span className="label-text">Image</span>

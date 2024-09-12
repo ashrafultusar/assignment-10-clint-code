@@ -40,7 +40,9 @@ const Statistics = () => {
                                 enableScrollSpy
                             />
                         )}
-                        <h3 className='text-2xl lg:text-4xl font-body font-semibold text-white text-center'>
+                        <h3 data-aos="fade-up"
+          data-aos-anchor-placement="top-bottom"
+          data-aos-duration="1500" className='text-2xl lg:text-4xl font-body font-semibold text-white text-center'>
                             Total Products
                         </h3>
                     </div>
@@ -58,7 +60,9 @@ const Statistics = () => {
                                 enableScrollSpy
                             />
                         )}
-                        <h3 className='text-2xl lg:text-4xl font-body font-semibold text-white'>
+                        <h3 data-aos="fade-up"
+          data-aos-anchor-placement="top-bottom"
+          data-aos-duration="1500" className='text-2xl lg:text-4xl font-body font-semibold text-white'>
                             Total Category
                         </h3>
                     </div>
@@ -76,7 +80,9 @@ const Statistics = () => {
                                 enableScrollSpy
                             />
                         )}
-                        <h3 className='text-2xl lg:text-4xl font-body font-semibold text-white'>
+                        <h3 data-aos="fade-up"
+          data-aos-anchor-placement="top-bottom"
+          data-aos-duration="1500" className='text-2xl lg:text-4xl font-body font-semibold text-white'>
                             Registered Users
                         </h3>
                     </div>

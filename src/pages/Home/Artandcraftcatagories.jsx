@@ -5,7 +5,7 @@ const Artandcraftcatagories = () => {
   const [allcatagorie, setAllcatagorie] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/categories`)
+    fetch(`https://art-and-craft-store-server-psi.vercel.app/categories`)
       .then((res) => res.json())
       .then((data) => {
         setAllcatagorie(data);

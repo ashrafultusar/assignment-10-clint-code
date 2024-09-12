@@ -12,7 +12,9 @@ const CraftItems = () => {
       </Helmet>
 
       <div> 
-        <h1 className="text-4xl font-semibold mb-6 text-center">
+        <h1 data-aos="fade-down"
+          data-aos-anchor-placement="top-bottom"
+          data-aos-duration="1500" className="text-4xl text-white font-semibold md:mb-10 text-center">
           Best Selling Product
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

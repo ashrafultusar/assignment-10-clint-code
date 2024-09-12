@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@emotion/react": "^11.11.4",
+    "aos": "^2.3.4",
     "firebase": "^10.11.1",
     "helmet": "^7.1.0",
     "localforage": "^1.10.0",

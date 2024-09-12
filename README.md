@@ -5,7 +5,7 @@
 
 <<<<<<< HEAD
 =>Live Link: https://art-and-craft-authentaction.web.app/home
-=>Api : http://localhost:5000
+=>Api : https://art-and-craft-store-server-psi.vercel.app
 =======
 ## Overview
 D-ART is an art and craft-related website where all kinds of man-made art and crafts are sold. It is a multi-dimensional platform that allows users to:

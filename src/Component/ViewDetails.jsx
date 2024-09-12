@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { FcRating } from "react-icons/fc";
+import { useEffect, useState } from "react";
 
 const ViewDetails = () => {
   const { id } = useParams(); 
@@ -52,7 +53,7 @@ const ViewDetails = () => {
               {view.processingTime}
             </h2>
             <h2 className="card-title pr-20">
-              <span className="text-2xl font-bold">Stock Status:</span>{" "}
+              <span className="text-2xl font-bold">Stock Status:</span>
               {view.stockStatus}
             </h2>
           </div>

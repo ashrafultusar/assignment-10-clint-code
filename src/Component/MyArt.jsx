@@ -29,7 +29,7 @@ const MyArt = () => {
   // update section
   useEffect(() => {
     if (user) {
-      fetch(`http://localhost:5000/myArt/${user?.email}`)
+      fetch(`https://art-and-craft-store-server-psi.vercel.app/myArt/${user?.email}`)
         .then((res) => res.json())
         .then((data) => {
           setItem(data);
@@ -49,7 +49,7 @@ const MyArt = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/delete/${id}`, {
+        fetch(`https://art-and-craft-store-server-psi.vercel.app/delete/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
@@ -145,7 +145,9 @@ const MyArt = () => {
           </div>
         ))} */}
         {filter.map((p) => (
-          <div className="max-w-sm mx-auto bg-gradient-to-b from-teal-950 to-teal-900 rounded-lg shadow-lg overflow-hidden border">
+          <div data-aos="fade-up"
+          data-aos-anchor-placement="top-bottom"
+          data-aos-duration="1200" className="hover:scale-[1.05] transition-all max-w-sm mx-auto bg-gradient-to-b from-teal-950 to-teal-900 rounded-lg shadow-lg overflow-hidden border">
             <img
               className="w-full h-64 object-cover p-4 rounded-2xl"
               src={p.photo}

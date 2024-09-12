@@ -22,7 +22,7 @@ const router = createBrowserRouter([
         path: "/home",
         element: <Home></Home>,
         loader: () =>
-          fetch("http://localhost:5000/craft"),
+          fetch("https://art-and-craft-store-server-psi.vercel.app/craft"),
       },
       {
         path: "/login",
@@ -36,7 +36,7 @@ const router = createBrowserRouter([
         path: "/all-art",
         element: <AllArt></AllArt>,
         loader: () =>
-          fetch("http://localhost:5000/craft"),
+          fetch("https://art-and-craft-store-server-psi.vercel.app/craft"),
       },
       {
         path: "/add-carft",
